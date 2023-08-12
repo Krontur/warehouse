@@ -1,0 +1,68 @@
+.products-list {
+  background-color: #15202B;
+  padding: 15px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.product-table th, .product-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-table th {
+  background-color: #1DA1F2;
+  color: #15202B;
+}
+
+.product-table tr:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.product-table button {
+  background-color: #1DA1F2;
+  color: #15202B;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.product-table button:hover {
+  background-color: #15202B;
+  color: #1DA1F2;
+}
+
+.modal-dialog {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: auto;
+  background-color: #15202B;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-title{
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
+
+.modal-dialog button{
+  background-color: #1DA1F2;
+  color: #15202B;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
