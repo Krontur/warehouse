@@ -2,10 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../config/firebase';
 import { getDocs, collection, orderBy, query } from 'firebase/firestore';
 
+import SearchBar from './SearchBar';
+
 import '../css/PurchaseHistoryComponent.css'
 
 const PurchaseHistoryComponent = () => {
     const [purchaseHistory, setPurchaseHistory] = useState([]);
+    const [searchedEntry, setSearchedEntry] = useState('');
+
+    
+    const handleSearch = async (searchTerm) => {
+        try{
+            setSearchedEntry(searchTerm);
+            getPurchaseHistory();
+        } catch (e) {
+        console.error(e);
+        }
+    }
 
     const getPurchaseHistory = async () => {
         try {
@@ -17,8 +30,22 @@ const PurchaseHistoryComponent = () => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
                     })
                 });
-            
+            let filteredProducts;
+            if(searchedEntry !== '') {
+                filteredProducts = data.filter(doc => {
+                const searchText = searchedEntry.toLowerCase();
+                // Recorre cada campo en los datos del documento y verifica si el valor está presente
+                for (const key in doc) {
+                    if (typeof doc[key] === 'string' && doc[key].toLowerCase().includes(searchText)) {
+                        return true;  // Si se encuentra el valor en algún campo, incluye este documento en el resultado
+                    }
+                }
+                return false;  // Si el valor no se encuentra en ningún campo, excluye este documento
+            });
+                setPurchaseHistory(filteredProducts);
+            } else {
                 setPurchaseHistory(data);
+            }
         } catch (error) {
             console.error(error);
         }
@@ -29,6 +56,8 @@ const PurchaseHistoryComponent = () => {
     }, []);
 
     return (
+        <>
+        <SearchBar onSearch={handleSearch}/>
         <div className="purchase-history">
             <h2>Historial de Compras</h2>
             <table className="hist-table">
@@ -66,6 +95,7 @@ const PurchaseHistoryComponent = () => {
                 </tbody>
             </table>
         </div>
+        </>
     );
     
 }

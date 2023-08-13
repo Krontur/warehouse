@@ -20,7 +20,7 @@ const ProductsList = () => {
   
   const handleSearch = async (searchTerm) => {
     try{
-      await setSearchedProduct(searchTerm);
+      setSearchedProduct(searchTerm);
       getProductsList();
     } catch (e) {
       console.error(e);
@@ -38,14 +38,13 @@ const ProductsList = () => {
             data.push(Object.assign(doc.data(), {"id": doc.id}));
           })
         });
-      console.log(data);
       let filteredProducts;
       if(searchedProduct !== '') {
         filteredProducts = data.filter(doc => {
           const searchText = searchedProduct.toLowerCase();
           // Recorre cada campo en los datos del documento y verifica si el valor está presente
           for (const key in doc) {
-              if (typeof doc[key] === 'string' && doc[key].includes(searchText)) {
+              if (typeof doc[key] === 'string' && doc[key].toLowerCase().includes(searchText)) {
                   return true;  // Si se encuentra el valor en algún campo, incluye este documento en el resultado
               }
           }

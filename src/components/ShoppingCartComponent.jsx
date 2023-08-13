@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../config/firebase';
 import { getDocs, collection, orderBy, query } from 'firebase/firestore';
-import { exportToExcel, saveCartItemsToFirestore } from '../js/utils'
+import { getHighestFieldValue, exportToExcel, saveCartItemsToFirestore } from '../js/utils'
 
 import '../css/ShoppingCartComponent.css';
 
@@ -34,6 +34,8 @@ const ShoppingCartComponent = () => {
             });
             
             setCartItems(reorderedData);
+        
+            setLastOrder( await getHighestFieldValue('entries', 'orderNumber'));
         } catch (error) {
             console.error(error);
         }
