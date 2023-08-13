@@ -22,8 +22,7 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <FontAwesomeIcon icon='fa-solid fa-xmark'/>
-      <button type="submit">Search </button><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+      <button type="submit">Search </button>
     </form>
   );
 };

@@ -76,32 +76,32 @@ const AddCartItemForm = ({ product, afterSave }) => {
       </div>
 
       <div className="form-group">
-        <label>Description:</label>
+        <label>Beschreibung:</label>
         <input type="text" name="description" value={formData.description} onChange={handleChange} disabled/>
       </div>
       
       <div className="form-group">
-        <label>EANCode:</label>
+        <label>EAN-Code:</label>
         <input type="text" name="EANCode" value={formData.EANCode} onChange={handleChange} />
       </div>
 
       <div className="form-group">
-        <label>Producer:</label>
+        <label>Hersteller:</label>
         <input type="text" name="producer" value={formData.producer} onChange={handleChange} disabled/>
       </div>
 
       <div className="form-group">
-        <label>Product ID:</label>
+        <label>Produkt ID:</label>
         <input type="number" name="productID" value={formData.productID} onChange={handleChange} disabled/>
       </div>
 
       <div className="form-group">  
-        <label>Product Number:</label>
+        <label>Art.Nr.:</label>
         <input type="text" name="productNumber" value={formData.productNumber} onChange={handleChange} disabled/>
       </div>
 
       <div className="form-group">
-        <label>Short Description:</label>
+        <label>Kurze Beschreibung:</label>
         <input type="text" name="shortDescription" value={formData.shortDescription} onChange={handleChange} disabled/>
       </div>
 
@@ -111,7 +111,7 @@ const AddCartItemForm = ({ product, afterSave }) => {
       </div>
 
       <div className="form-group">
-        <label>Mengeneinheit:</label>
+        <label>Einheit:</label>
         <input type="text" name="unit" value={formData.unit} onChange={handleChange} />
       </div>
 
