@@ -3,6 +3,15 @@
   padding: 15px;
 }
 
+.product-table .action{
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-table .action button{
+  width: 32%;
+}
+
 .product-table {
   width: 100%;
   border-collapse: collapse;
@@ -44,12 +53,18 @@
   top: 70px;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
-  height: auto;
+  width: 30vw;
+  height: 80vh;
   background-color: #15202B;
   border-radius: 5px;
   padding: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: block !important;
+}
+
+.modal-body {
+  height: 70vh;
+  overflow-y: auto;
 }
 
 .modal-title{
@@ -65,4 +80,12 @@
   border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
+}
+
+
+.products-list h1 {
+  color: #ecedee;
+  background-color: #1DA1F2;
+  display: flex;
+  justify-content: center;
 }

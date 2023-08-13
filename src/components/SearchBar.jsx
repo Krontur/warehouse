@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/SearchBar.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -21,7 +22,8 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <button type="submit">Search</button>
+      <FontAwesomeIcon icon='fa-solid fa-xmark'/>
+      <button type="submit">Search </button><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
     </form>
   );
 };

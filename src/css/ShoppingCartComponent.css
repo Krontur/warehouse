@@ -1,0 +1,37 @@
+.shopping-cart {
+    background-color: #15202B;
+    padding: 15px;
+}
+
+.shopping-cart h2 {
+    color: #1DA1F2;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.shopping-cart h1 {
+    color: #f0ecec;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.shopping-cart .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shopping-cart .cart-table th, .shopping-cart .cart-table td {
+    border: 1px solid rgba(236, 233, 233, 0.726);
+    padding: 8px 12px;
+    color: rgb(245, 243, 239);
+}
+
+.shopping-cart .cart-table th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.shopping-cart .cart-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}

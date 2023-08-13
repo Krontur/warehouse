@@ -7,12 +7,14 @@ import { Modal } from 'react-bootstrap';
 
 import ProductForm from './ProductForm';
 import SearchBar from './SearchBar';
+import AddCartItemForm from './AddCartItemForm';
 import '../css/ProductsList.css';
 
 const ProductsList = () => {
   const [productsList, setProductsList] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null); 
-  const [showModal, setShowModal] = useState(false);
+  const [showModalEdit, setShowModalEdit] = useState(false);
+  const [showModalAdd, setShowModalAdd] = useState(false);
   const [searchedProduct, setSearchedProduct] = useState('');
 
   
@@ -74,22 +76,27 @@ const ProductsList = () => {
     }
   }
 
+  const handleAddClick = (product) => () => {
+    setSelectedProduct(product);  // Set the selected product
+    setShowModalAdd(true);
+  }
   const handleEditClick = (product) => () => {
     setSelectedProduct(product);  // Set the selected product
-    setShowModal(true);
+    setShowModalEdit(true);
   }
 
   const handleCloseModal = () => {
     setSelectedProduct(null);
     getProductsList();
-    setShowModal(false);  // Close the modal
+    setShowModalEdit(false);
+    setShowModalAdd(false);   // Close the modal
   }
 
   return (
     <>
     <SearchBar onSearch={handleSearch}/>
-    <h1>Products List</h1>
     <div className="products-list">
+      <h1>Products List</h1>
       <table className="product-table">
         <thead>
           <tr>
@@ -111,9 +118,10 @@ const ProductsList = () => {
               <td>{product.productNumber}</td>
               <td>{product.shortDescription}</td>
               <td>{product.productID}</td>
-              <td>
+              <td className="action">
                 <button onClick={handleEditClick(product)}>Edit</button>
                 <button onClick={handleClickDelete(product.id)}>Delete</button>
+                <button onClick={handleAddClick(product)}>Add</button>
               </td>
             </tr>
           ))}
@@ -121,12 +129,24 @@ const ProductsList = () => {
       </table>
     </div>
     
-    <Modal backdrop="static" show={showModal} onHide={handleCloseModal}>
-      <Modal.Header closeButton>
+    <Modal backdrop="static" show={showModalEdit} onHide={handleCloseModal}>
+      <Modal.Header>
         <Modal.Title>Edit Product</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <ProductForm product={selectedProduct} afterSave={handleCloseModal} />
+      </Modal.Body>
+      <Modal.Footer>
+        <button onClick={handleCloseModal}>Close</button>
+      </Modal.Footer>
+    </Modal>
+
+    <Modal backdrop="static" show={showModalAdd} onHide={handleCloseModal}>
+      <Modal.Header>
+        <Modal.Title>Add Product</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <AddCartItemForm product={selectedProduct} afterSave={handleCloseModal} />
       </Modal.Body>
       <Modal.Footer>
         <button onClick={handleCloseModal}>Close</button>
