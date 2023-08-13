@@ -10,14 +10,12 @@ const NavbarComponent = () => {
                 <Navbar.Brand href="/">Lagerverwaltung</Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <Nav.Link href="/">Inicio</Nav.Link>
-                        <Nav.Link href="#about">Acerca de</Nav.Link>
-                        <Nav.Link href="/products">Productos</Nav.Link>
-                        <Nav.Link href="/createproduct">Crear producto</Nav.Link>                        
-                        <Nav.Link href="/purchasehistory">Historial de pedidos</Nav.Link>
-                        <Nav.Link href="/shoppingcart">Carrito de la compra</Nav.Link>
-                        <Nav.Link href="/addcartitem">Añadir al carrito</Nav.Link>
-                        <Nav.Link href="#contact">Contacto</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/products">Produkte</Nav.Link>
+                        <Nav.Link href="/createproduct">neues Produkt</Nav.Link>                        
+                        <Nav.Link href="/purchasehistory">Historie</Nav.Link>
+                        <Nav.Link href="/shoppingcart">Warenkorb</Nav.Link>
+                        <Nav.Link href="/addcartitem">neue Buchung</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
