@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    min-height: 3rem;
+    background-color: #1DA1F2;
   }
   
   .search-bar input {
@@ -13,11 +14,14 @@
     color: rgba(255, 255, 255, 0.8);
     flex-grow: 1;
     transition: background-color 0.2s, color 0.2s;
+    height: 2rem;
   }
   
   .search-bar input:focus {
     outline: none;
     background-color: rgba(29, 161, 242, 0.1);
+    color: #000;
+    font-size: 1rem;
   }
   
   .search-bar button {
@@ -28,6 +32,8 @@
     color: #15202B;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
+    height: 2.5rem;
+    width: 10vw;
   }
   
   .search-bar button:hover {

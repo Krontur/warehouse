@@ -11,6 +11,7 @@
     font-size: 1.4rem;
     color: #1DA1F2; /* Color azul claro de Twitter para el brand */
     padding-bottom: 20px;
+    text-decoration:none;
 }
 
 .navbar-collapse {
