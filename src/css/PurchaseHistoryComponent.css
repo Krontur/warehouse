@@ -1,7 +1,6 @@
 .purchase-history {
     background-color: #15202B;
     padding: 15px;
-    border-radius: 10px;
 }
 
 .purchase-history h2 {
@@ -11,26 +10,28 @@
     margin-bottom: 15px;
 }
 
-.purchase-history ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.purchase-history li {
-    background-color: rgba(29, 161, 242, 0.1);
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.purchase-history h3 {
-    color: #1DA1F2;
+.purchase-history h1 {
+    color: #f0ecec;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
 
-.purchase-history p {
-    color: rgba(255, 255, 255, 0.8);
-    margin: 5px 0;
+.purchase-history .hist-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.purchase-history .hist-table th, .purchase-history .hist-table td {
+    border: 1px solid rgba(236, 233, 233, 0.726);
+    padding: 8px 12px;
+    color: rgb(245, 243, 239);
+}
+
+.purchase-history .hist-table th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.purchase-history .hist-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
 }

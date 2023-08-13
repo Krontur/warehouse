@@ -1,5 +1,5 @@
 import { db } from '../config/firebase';
-import { query, orderBy, limit, getDocs, collection } from "firebase/firestore";
+import { query, orderBy, limit, getDocs, collection, addDoc } from "firebase/firestore";
 import { utils, writeFile } from 'xlsx';
 
 export async function getHighestFieldValue(collectionName, fieldName) {
@@ -71,3 +71,31 @@ export function exportToExcel(data, filename = 'data') {
     // Escribimos el libro en un archivo .xlsx
     writeFile(wb, `${filename}.xlsx`);
 }
+
+//función para guardar los items de cartItems en firestore dentro de orders, una vez obtenida una respuesta de firestore de que los elementos se han guardado correctamente se borran todos los items de la colección items
+//cada entrada de entries obtendrá un número ordinal identificativo, es decir, el numero de entrada de esa colección. Además se almacenara el 
+//numero de order, que será pasado como parametro a la función.
+export async function saveCartItemsToFirestore(cartItems, orderNumber) {
+  
+  let index = await getHighestFieldValue('entries', 'entryNumber');
+
+  //guardamos los items de cartItems en la colección orders
+  cartItems.forEach(async (cartItem) => {
+
+    //añadimos el numero de order a cada item
+    cartItem.orderNumber = orderNumber;
+
+    //añadimos el numero de entrada de la colección a cada item
+    index = index + 1;
+    cartItem.entryNumber = index;
+
+    //añadimos el item a la colección entries
+    await addDoc(collection(db,'entries'),{...cartItem})
+  });
+
+  //borramos todos los items de la colección cartItems
+  /*cartItems.forEach(async (cartItem, index) => {
+    await db.collection('cartItems').doc(cartItem.id).delete();
+  });*/
+}
+
