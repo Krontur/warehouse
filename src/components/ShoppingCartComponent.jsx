@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { db } from '../config/firebase';
 import { getDocs, collection, orderBy, query } from 'firebase/firestore';
 import { getHighestFieldValue, exportToExcel, saveCartItemsToFirestore } from '../js/utils'
@@ -8,6 +9,7 @@ import '../css/ShoppingCartComponent.css';
 const ShoppingCartComponent = () => {
     const [lastOrder, setLastOrder] = useState(null);
     const [cartItems, setCartItems] = useState([]);
+    const navigate = useNavigate();
 
     //setLastOrder(getHighestFieldValue('orders', 'orderNumber'))
 
@@ -25,14 +27,13 @@ const ShoppingCartComponent = () => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
                     })
                 });
-            const columnOrder = ["Position", "date", "productID", "productNumber", "EANCode", "description",  "costcenter", "jobnumber", "quantity", "unit"];
+            const columnOrder = ["Position", "date", "productID", "productNumber", "EANCode", "description",  "costcenter", "jobnumber", "quantity", "unit", "id"];
             const reorderedData = data.map(row => {
                 return columnOrder.reduce((obj, key) => {
                     obj[key] = row[key];
                     return obj;
                 }, {});
             });
-            
             setCartItems(reorderedData);
         
             setLastOrder( await getHighestFieldValue('entries', 'orderNumber'));
@@ -48,7 +49,8 @@ const ShoppingCartComponent = () => {
     const handleSendClick = (cartItems, order, orderNumber) => {
         exportToExcel(cartItems, order);
         alert("Your Order has been sent to the server");
-        saveCartItemsToFirestore(cartItems, orderNumber)
+        saveCartItemsToFirestore(cartItems, orderNumber);
+        navigate("/shoppingcart");
     };
 
     return (

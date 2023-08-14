@@ -18,10 +18,9 @@ const ProductsList = () => {
   const [searchedProduct, setSearchedProduct] = useState('');
 
   
-  const handleSearch = async (searchTerm) => {
+  const handleSearch = (searchTerm) => {
     try{
       setSearchedProduct(searchTerm);
-      getProductsList();
     } catch (e) {
       console.error(e);
     }
@@ -61,7 +60,7 @@ const ProductsList = () => {
   
   useEffect(() => {
     getProductsList();
-  }, []);
+  }, [searchedProduct]);
 
 
   const handleClickDelete = (id) => async () => {
@@ -93,19 +92,19 @@ const ProductsList = () => {
 
   return (
     <>
-    <SearchBar onSearch={handleSearch}/>
+    <SearchBar onSearch={handleSearch} page={"/products"}/>
     <div className="products-list">
-      <h1>Products List</h1>
+      <h1>Produktliste</h1>
       <table className="product-table">
         <thead>
           <tr>
-            <th>Description</th>
-            <th>EANCode</th>
-            <th>Producer</th>
-            <th>Product Number</th>
-            <th>Short Description</th>
-            <th>Product ID</th>
-            <th>Action</th>
+            <th>Beschreibung</th>
+            <th>EAN-Code</th>
+            <th>Hersteller</th>
+            <th>Art.Nr.:</th>
+            <th>Kurze Beschreibung</th>
+            <th>Produkt ID</th>
+            <th className='aligncenter'>Aktionen</th>
           </tr>
         </thead>
         <tbody>
@@ -118,9 +117,9 @@ const ProductsList = () => {
               <td>{product.shortDescription}</td>
               <td>{product.productID}</td>
               <td className="action">
-                <button onClick={handleEditClick(product)}>Edit</button>
-                <button onClick={handleClickDelete(product.id)}>Delete</button>
-                <button onClick={handleAddClick(product)}>Add</button>
+                <button onClick={handleEditClick(product)}>Bearbeiten</button>
+                <button onClick={handleClickDelete(product.id)}>Löschen</button>
+                <button onClick={handleAddClick(product)}>Hinzufügen</button>
               </td>
             </tr>
           ))}

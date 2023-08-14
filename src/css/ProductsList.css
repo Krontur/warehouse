@@ -27,6 +27,11 @@
 .product-table th {
   background-color: #1DA1F2;
   color: #15202B;
+  text-align: left;
+}
+
+.product-table .aligncenter{
+  text-align: center !important;
 }
 
 .product-table tr:hover {
