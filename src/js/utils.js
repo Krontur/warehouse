@@ -1,5 +1,5 @@
 import { db } from '../config/firebase';
-import { query, orderBy, limit, getDocs, collection, addDoc } from "firebase/firestore";
+import { query, orderBy, limit, getDocs, collection, addDoc, deleteDoc, doc } from "firebase/firestore";
 import { utils, writeFile } from 'xlsx';
 
 export async function getHighestFieldValue(collectionName, fieldName) {
@@ -82,6 +82,9 @@ export async function saveCartItemsToFirestore(cartItems, orderNumber) {
   //guardamos los items de cartItems en la colección orders
   cartItems.forEach(async (cartItem) => {
 
+    const docItemRef = await doc(db, 'items', cartItem.id);
+    const docEntriesRef = await collection(db, 'entries');
+
     //añadimos el numero de order a cada item
     cartItem.orderNumber = orderNumber;
 
@@ -90,12 +93,9 @@ export async function saveCartItemsToFirestore(cartItems, orderNumber) {
     cartItem.entryNumber = index;
 
     //añadimos el item a la colección entries
-    await addDoc(collection(db,'entries'),{...cartItem})
+    if(await addDoc(docEntriesRef, {...cartItem})){
+      deleteDoc(docItemRef);
+    };
   });
-
-  //borramos todos los items de la colección cartItems
-  /*cartItems.forEach(async (cartItem, index) => {
-    await db.collection('cartItems').doc(cartItem.id).delete();
-  });*/
 }
 

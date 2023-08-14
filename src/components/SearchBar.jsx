@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import '../css/SearchBar.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { FaFilterCircleXmark, FaMagnifyingGlass } from 'react-icons/fa6'
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
@@ -14,15 +16,25 @@ const SearchBar = ({ onSearch }) => {
     onSearch(searchTerm);
   };
 
+  const handleOnClear = () => {
+    setSearchTerm('');
+    onSearch('');
+  };
+
   return (
     <form onSubmit={handleSubmit} className="search-bar">
       <input 
         type="text"
-        placeholder="Search products..."
+        placeholder="Produkte suchen..."
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <button type="submit">Search </button>
+      <button type="button" onClick={handleOnClear}>
+        <FaFilterCircleXmark/>
+      </button>
+      <button type="submit">
+        <FaMagnifyingGlass/>
+      </button>
     </form>
   );
 };
