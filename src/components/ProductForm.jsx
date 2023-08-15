@@ -52,6 +52,8 @@ const ProductForm = ({ product, afterSave }) => {
   };
 
   return (
+    <>
+    <h1>neues Produkt hinzufügen</h1>
     <form onSubmit={handleSubmit} className="product-form">
       <div className="form-group">
         <label>Beschreibung:</label>
@@ -84,9 +86,10 @@ const ProductForm = ({ product, afterSave }) => {
       </div>
 
       <div className="form-group">
-        <button type="submit">Save</button>
+        <button type="submit">Speichern</button>
       </div>
     </form>
+    </>
   );
 };
 

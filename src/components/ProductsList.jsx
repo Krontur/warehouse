@@ -92,7 +92,7 @@ const ProductsList = () => {
 
   return (
     <>
-    <SearchBar onSearch={handleSearch} page={"/products"}/>
+    <SearchBar onSearch={handleSearch} placeholder="Produkte suchen..."/>
     <div className="products-list">
       <h1>Produktliste</h1>
       <table className="product-table">
@@ -135,7 +135,7 @@ const ProductsList = () => {
         <ProductForm product={selectedProduct} afterSave={handleCloseModal} />
       </Modal.Body>
       <Modal.Footer>
-        <button onClick={handleCloseModal}>Close</button>
+        <button onClick={handleCloseModal}>Schliessen</button>
       </Modal.Footer>
     </Modal>
 
@@ -147,7 +147,7 @@ const ProductsList = () => {
         <AddCartItemForm product={selectedProduct} afterSave={handleCloseModal} />
       </Modal.Body>
       <Modal.Footer>
-        <button onClick={handleCloseModal}>Close</button>
+        <button onClick={handleCloseModal}>Schliessen</button>
       </Modal.Footer>
     </Modal>
     </>

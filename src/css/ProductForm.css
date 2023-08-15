@@ -49,3 +49,10 @@
     background-color: #15202B;
     color: #1DA1F2;
 }
+
+h1 {
+    color: #ecedee;
+    background-color: #1DA1F2;
+    display: flex;
+    justify-content: center;
+}

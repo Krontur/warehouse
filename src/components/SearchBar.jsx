@@ -3,7 +3,7 @@ import '../css/SearchBar.css';
 import { FaFilterCircleXmark, FaMagnifyingGlass } from 'react-icons/fa6'
 import { useNavigate } from 'react-router-dom';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, placeholder }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
@@ -25,15 +25,15 @@ const SearchBar = ({ onSearch }) => {
     <form onSubmit={handleSubmit} className="search-bar">
       <input 
         type="text"
-        placeholder="Produkte suchen..."
+        placeholder={placeholder}
         value={searchTerm}
         onChange={handleInputChange}
       />
       <button type="button" onClick={handleOnClear}>
-        <FaFilterCircleXmark/>
+        <FaFilterCircleXmark size="lg"/>
       </button>
       <button type="submit">
-        <FaMagnifyingGlass/>
+        <FaMagnifyingGlass size="lg"/>
       </button>
     </form>
   );
