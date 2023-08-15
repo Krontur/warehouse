@@ -8,6 +8,7 @@
 .product-form .form-group {
     margin-bottom: 15px;
     max-width: 75vw;
+    flex-basis: 100%;
 }
 
 .product-form label {
@@ -47,4 +48,11 @@
 .product-form button:hover {
     background-color: #15202B;
     color: #1DA1F2;
+}
+
+h1 {
+    color: #ecedee;
+    background-color: #1DA1F2;
+    display: flex;
+    justify-content: center;
 }

@@ -57,9 +57,9 @@ const PurchaseHistoryComponent = () => {
 
     return (
         <>
-        <SearchBar onSearch={handleSearch}/>
+        <SearchBar onSearch={handleSearch} placeholder={"Buchung suchen..."}/>
         <div className="purchase-history">
-            <h2>Historial de Compras</h2>
+            <h1>Buchungshistorie</h1>
             <table className="hist-table">
                 <thead>
                     <tr>
@@ -69,6 +69,7 @@ const PurchaseHistoryComponent = () => {
                         <th>Produkt ID</th>
                         <th>EAN-Code</th>
                         <th>Art.Nr.</th>
+                        <th>Hersteller</th>
                         <th>Beschreibung</th>
                         <th>Kostenstelle</th>
                         <th>Auftragsnummer</th>
@@ -85,6 +86,7 @@ const PurchaseHistoryComponent = () => {
                             <td>{entry.productID}</td>
                             <td>{entry.EANCode}</td>
                             <td>{entry.productNumber}</td>
+                            <td>{entry.producer}</td>
                             <td>{entry.description}</td>
                             <td>{entry.costcenter}</td>
                             <td>{entry.jobnumber}</td>

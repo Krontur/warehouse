@@ -54,6 +54,8 @@ const AddCartItemForm = ({ product, afterSave }) => {
   };
 
   return (
+    <>
+    <h1>neue Buchung hinzufügen</h1>
     <form onSubmit={handleSubmit} className="product-form">
       <div className="form-group">
         <label>Position:</label>
@@ -116,9 +118,10 @@ const AddCartItemForm = ({ product, afterSave }) => {
       </div>
 
       <div className="form-group">
-        <button type="submit">Save</button>
+        <button type="submit">Speichern</button>
       </div>
     </form>
+    </>
   );
 };
 
