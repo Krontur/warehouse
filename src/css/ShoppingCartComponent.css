@@ -44,14 +44,21 @@
 }
 
 .shopping-cart button {
-    background-color: #1DA1F2;
+    background-color: #c1e0f3;
     color: #15202B;
-    padding: 5px 10px;
+    padding: 10px 50px;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
 }
+
+.shopping-cart button:hover {
+    background-color: #2c4657;
+    color: #e4e9ee;
+    transition: background-color 0.2s, color 0.2s;
+}
+
 
 .shopping-cart .aligncenter{
     text-align: center !important;

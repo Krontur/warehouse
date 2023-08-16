@@ -31,7 +31,7 @@ const ShoppingCartComponent = () => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
                     })
                 });
-            const columnOrder = ["Position", "date", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "unit", "id"];
+            const columnOrder = ["Position", "date", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "unit", "id", "comment"];
             const reorderedData = data.map(row => {
                 return columnOrder.reduce((obj, key) => {
                     obj[key] = row[key];
@@ -98,6 +98,7 @@ const ShoppingCartComponent = () => {
                         <th>Auftragsnummer</th>
                         <th>Menge</th>
                         <th>Einheit</th>
+                        <th>Kommentar</th>
                         <th className='aligncenter'>Aktionen</th>
                     </tr>
                 </thead>
@@ -114,6 +115,7 @@ const ShoppingCartComponent = () => {
                             <td>{item.jobnumber}</td>
                             <td>{item.quantity}</td>
                             <td>{item.unit}</td>
+                            <td>{item.comment}</td>
                             <td className="action">
                                 <button onClick={handleEditClick(item)}>Bearbeiten</button>
                                 <button onClick={handleClickDelete(item.id)}>Löschen</button>

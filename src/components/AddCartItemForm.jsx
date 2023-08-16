@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../config/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 import '../css/ProductForm.css';
 import { getHighestFieldValue } from '../js/utils';
 
@@ -18,29 +18,57 @@ const AddCartItemForm = ({ product, afterSave }) => {
     producer: '',
     productID: '',
     productNumber: '',
-    shortDescription: ''
+    shortDescription: '',
+    comment: ''
   });
   const [highestValuePosition, setHighestValuePosition] = useState(null)
   const navigate = useNavigate();
   const date = new Date();
 
   useEffect(() => {
+    console.log(formData.EANCode);
     if (product) {
       setFormData(product);
     }
+
     async function fetchHighestValue(){
       const value = await getHighestFieldValue('items', 'Position');
       setHighestValuePosition(value);
     }
     fetchHighestValue();
-  }, [product]);
+  }, [product, formData]);
+
+  const getDocEANCode = async (EAN) => {
+    const products = collection(db, "products");
+    const q = query(products, where("EANCode", "==", EAN));
+    const querySnapshot = await getDocs(q);
+    return querySnapshot;
+  }
 
   const handleChange = (e) => {
+    console.log(e);
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
       [name]: value
     }));
+
+    if (name === 'EANCode' && value.trim() !== '') {
+      getDocEANCode(value).then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          console.log(doc.data());
+          setFormData(prevState => ({
+            ...prevState,
+            description: doc.data().description,
+            producer: doc.data().producer,
+            productID: doc.data().productID,
+            productNumber: doc.data().productNumber,
+            shortDescription: doc.data().shortDescription
+          }));
+        });
+      });
+    }
+
   };
 
   const handleSubmit = async (e) => {
@@ -115,6 +143,11 @@ const AddCartItemForm = ({ product, afterSave }) => {
       <div className="form-group">
         <label>Einheit:</label>
         <input type="text" name="unit" value={formData.unit} onChange={handleChange} />
+      </div>
+
+      <div className="form-group">
+        <label>Kommentar:</label>
+        <textarea rows={6} cols={26} name="comment" value={formData.comment} onChange={handleChange} />
       </div>
 
       <div className="form-group">
