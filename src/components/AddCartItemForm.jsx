@@ -77,8 +77,10 @@ const AddCartItemForm = ({ product, afterSave }) => {
     await addDoc(collection(db, "items"), updatedData);
     if (product) {
       afterSave && afterSave();
+      navigate("/shoppingcart")
+    } else {
+      navigate("/products")
     }
-    navigate("/products")
   };
 
   return (
