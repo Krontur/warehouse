@@ -3,6 +3,7 @@ import { TextField, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { auth } from '../config/firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles(() => ({
   form: {
@@ -16,6 +17,7 @@ const LoginForm = () => {
   const classes = useStyles();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,6 +25,7 @@ const LoginForm = () => {
        .then((userCredential) => {
         console.log( userCredential.user.email + "se ha logueado" )
       // Usuario ha iniciado sesión exitosamente
+      navigate("/");
     })
     .catch ((error) => {
       console.error(error);

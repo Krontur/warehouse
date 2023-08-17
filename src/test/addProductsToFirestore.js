@@ -1,6 +1,6 @@
 import { db } from '../config/firebase';
 import { writeBatch, doc, collection } from 'firebase/firestore';
-import { products } from '../data/productsList';
+import { products } from '../data/products';
 
 export default function addProductsToFirestore() {
   const batch = writeBatch(db);
