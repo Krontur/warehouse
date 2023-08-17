@@ -1,0 +1,283 @@
+entryNumber;date;orderNumber;user;productID;description;costcenter;jobnumber;quantity;comment;received
+1;13/10/2022;33-2022;Tur, Oscar González;30;Rundstecker Kupplung Blau ;ML1018;-;2;;0
+2;13/10/2022;33-2022;Tur, Oscar González;31;Rundstecker Kupplung rot;ML1018;-;4;;0
+3;13/10/2022;33-2022;Tur, Oscar González;32;Rundstecker Kupplung grün;ML1018;-;2;;0
+4;13/10/2022;33-2022;Tur, Oscar González;27;PAS Kunststoff OBO;ML1001;-;5;;0
+5;13/10/2022;33-2022;Tur, Oscar González;28;Jung Serienschalter;TL4100;-;10;Werkstatt;10
+6;13/10/2022;33-2022;Tur, Oscar González;29;Jung Wippe Serienschalter AS alpinweiß;TL4100;-;10;Werkstatt;10
+7;13/10/2022;33-2022;Tur, Oscar González;14;LEDTube 1500mm 24W 840 T8 EVG;ML1001;-;40;Terminal B - Beleuchtung;40
+8;13/10/2022;33-2022;Tur, Oscar González;15;LEDTube 1200mm 16W 840 T8 EVG;ML1001;-;40;Terminal B - Beleuchtung;40
+9;13/10/2022;33-2022;Tur, Oscar González;18;Adernendhülse 6mm² iso. 12mm Klauke;TL4100;-;500;Werkstatt;500
+10;13/10/2022;33-2022;Tur, Oscar González;19;Adernendhülse 2,5mm² iso. 12mm Klauke;TL4100;-;500;Werkstatt;500
+11;13/10/2022;33-2022;Tur, Oscar González;20;Adernendhülse 2,5mm² iso. 18mm Klauke;TL4100;-;500;Werkstatt;1000
+12;13/10/2022;33-2022;Tur, Oscar González;21;Adernendhülse 10mm² iso. 12mm Klauke;TL4100;-;200;Werkstatt;200
+13;13/10/2022;33-2022;Tur, Oscar González;22;Adernendhülse 10mm² iso. 18mm Klauke;TL4100;-;200;Werkstatt;100
+14;13/10/2022;33-2022;Tur, Oscar González;23;Adernendhülse 1,5mm² iso. 10mm Klauke;TL4100;-;500;Werkstatt;1000
+15;13/10/2022;33-2022;Tur, Oscar González;24;Adernendhülse 1,5mm² iso. 18mm Klauke;TL4100;-;500;Werkstatt;1000
+16;13/10/2022;33-2022;Tur, Oscar González;25;Adernendhülse 16mm² iso. 12mm Klauke;TL4100;-;200;Werkstatt;200
+17;13/10/2022;33-2022;Tur, Oscar González;33;Dämmerungsschalter Merten 544894 ;IL2101;-;2;Straßenbeleuchtung;2
+18;13/10/2022;33-2022;Tur, Oscar González;26;PVC-Schelle M40 OBO;TL4100;-;50;Werkstatt;50
+19;13/10/2022;33-2022;Tur, Oscar González;34;LF-Kanal PVC weiß 20x35mm;TL4100;-;40;Werkstatt;40
+20;13/10/2022;33-2022;Tur, Oscar González;35;LF-Kanal PVC weiß 40x40mm;TL4100;-;32;Werkstatt;0
+21;13/10/2022;33-2022;Tur, Oscar González;38;Batterie NP4-6;IL4200;-;4;Batterie für Handlampen E-Stationen;4
+22;13/10/2022;33-2022;Tur, Oscar González;36;Akku NiMh 4,8V/ 1100mAh;IL1203;-;7;Sicherheitsbeleuchtung;7
+23;13/10/2022;33-2022;Tur, Oscar González;37;Akku NiMh 7,2V/ 600mAh;ML1039;-;4;Sicherheitsbeleuchtung Veterinärgrenzkontr.;4
+24;13/10/2022;34-2022;Tur, Oscar González;13;SI 51 Ignitor;IL2100;-;50;Straßenbeleuchtung landseitig;50
+25;19/10/2022;34-2022;Tur, Oscar González;39;Blind-Abdeckung (gerastet), alpinweiß A 594-0 WW;ML1001;9316902;10;;10
+26;19/10/2022;34-2022;Tur, Oscar González;40;Rahmen 1fach, alpinweiß AS 581 BF WW;ML1001;9316902;10;;10
+27;19/10/2022;34-2022;Tur, Oscar González;41;Rahmen 2fach aw AS 582 BF WW;ML1001;9316902;10;;10
+28;27/10/2022;34-2022;Tur, Oscar González;45;Jalousietaster IP44 Aufputz Busch Jaeger;ML1001;;5;;5
+29;27/10/2022;34-2022;Tur, Oscar González;42;Aufputz-Kappe 1fach JUNG alpinweiß;ML1001;;5;;5
+30;27/10/2022;34-2022;Tur, Oscar González;43;Wippe Serienschalter JUNG Serie AS weiß;ML1001;;10;;10
+31;27/10/2022;34-2022;Tur, Oscar González;44;Jalousie-Schalter Busch-Jaeger ;ML1001;;10;;10
+32;27/10/2022;34-2022;Tur, Oscar González;46;Maus Logitech Master 3S;TL4000;;1;;1
+33;27/10/2022;34-2022;Tur, Oscar González;47;Treppenkarre PROMAT;TL4100;;1;;1
+34;27/10/2022;34-2022;Tur, Oscar González;48;Schraubensicherung 50ml Loctite;TL4000;;1;;5
+35;22/11/2022;35-2022;Tur, Oscar González;49;Aufbaugerätestecker 32A 412;;9225491;1;;1
+36;22/11/2022;35-2022;Tur, Oscar González;51;Sicherheitskupplung grün;TL4100;;3;;3
+37;22/11/2022;35-2022;Tur, Oscar González;53;Sicherheitskupplung sw;TL4100;;3;;3
+38;22/11/2022;35-2022;Tur, Oscar González;52;Steckdose Aufputz Siemens Delta;ML1001;;10;;10
+39;22/11/2022;35-2022;Tur, Oscar González;54;Sicherheitskupplung blau;TL4100;;3;;3
+40;29/11/2022;36-2022;Tur, Oscar González;55;Dämmerungsschalter, ABB;AL5004;813000005361;1;;1
+41;12/12/2022;36-2022;Tur, Oscar González;56;LSS C32A Hager 3pol.;IL1100;9225314;3;;3
+42;20/12/2022;36-2022;Tur, Oscar González;62;H07RN-F 3x2,5mm²;TL4100;;100;;100
+43;20/12/2022;36-2022;Tur, Oscar González;57;Steckdose Aufputz Jung;ML1014;9225628;5;;0
+44;20/12/2022;36-2022;Tur, Oscar González;58;H07RN-F 5x6mm²;TL4100;;50;;50
+45;20/12/2022;36-2022;Tur, Oscar González;59;H07RN-F 5x2,5mm²;TL4100;;100;;100
+46;20/12/2022;36-2022;Tur, Oscar González;60;Schukostecker IP44 250V;ML1014;9225628;5;;5
+47;20/12/2022;36-2022;Tur, Oscar González;61;Relais 16A 230V AC Finder ;TL4100;;5;;5
+48;20/12/2022;36-2022;Tur, Oscar González;63;FI 4pol. TypA 63A 30mA;IL3102;9225671;4;;4
+49;20/12/2022;36-2022;Tur, Oscar González;64;Sicherungselement D02 63A Hager;IL3102;9225671;5;;5
+50;21/12/2022;36-2022;Tur, Oscar González;66;Spannungsprüfer Fluke AC/DC T150;TL4100;;1;;1
+51;21/12/2022;36-2022;Tur, Oscar González;67;Spannungsprüfer Fluke T6-1000 LCD ;TL4100;;1;;1
+52;21/12/2022;36-2022;Tur, Oscar González;65;Mitnahmekontakt FI Siemens 5SV;IL3102;9225671;5;;5
+53;17/01/2023;01-2023;Tur, Oscar González;68;Leuchtstoffrohr PHILIPS TL-D 18W/840 ;ML1000;9317047;50;;50
+54;17/01/2023;01-2023;Tur, Oscar González;69;EVG QTi 1X35/49/80 DIM OSRAM;IL1305;;10;;10
+55;17/01/2023;01-2023;Tur, Oscar González;70;Kupplung 122 Mennekes;IL1301;9317034;3;;3
+56;18/01/2023;01-2023;Tur, Oscar González;71;Anbaugerätestecker 1408 16A 5p;TL4000;;3;Reparatur Heizlüfter;3
+57;18/01/2023;01-2023;Tur, Oscar González;72;Lüsterklemme mit Sicherung 0,5-2,5mm2 ;MD2000;;20;;20
+58;18/01/2023;01-2023;Tur, Oscar González;73;Relais FINDER mit Flachsteckanschlüssen, 2 Wechsler 30 A, Spule 230 V AC;TL4000;;5;Reparatur Heizlüfter;0
+59;19/01/2023;01-2023;Tur, Oscar González;74;EVG QTP5 1X14-35W OSRAM;ML1000;;20;Reparatur Beleuchtung;20
+60;19/01/2023;01-2023;Tur, Oscar González;17;Verbindungsdose Mini 25-L;TL4000;;20;;20
+61;01/02/2023;01-2023;Tur, Oscar González;75;Pumpsprühflasche Würth 1L;IL4200;;5;;0
+62;01/02/2023;01-2023;Tur, Oscar González;76;Bremsenreiniger 5L Würth;IL4200;;10;Notstrom Energiestationen;10
+63;01/02/2023;01-2023;Tur, Oscar González;77;Fettpresse mit 150 mm  Rohr FEPRRS;IL4200;;4;Notstrom Energiestationen;4
+64;01/02/2023;01-2023;Tur, Oscar González;78;MASTER LEDtube T8 KVG/VVG 1500mm 21.7W;ML2000;;100;Parkhausbeleuchtung;100
+65;02/02/2023;01-2023;Tur, Oscar González;80;Finder Zeitschaltuhr 230V 16A 1Wechsler;ML1030_Elt;9317033;25;Abschaltung Werbeträger;25
+66;02/02/2023;01-2023;Tur, Oscar González;81;Spelsberg Vert.schrank Aufputz 9TE;ML1030_Elt;9317033;15;Abschaltung Werbeträger;15
+67;02/02/2023;01-2023;Tur, Oscar González;82;LS MBN116 1pol B16A;ML1030_Elt;9317033;15;Abschaltung Werbeträger;15
+68;02/02/2023;01-2023;Tur, Oscar González;83;LS Siemens B16A 1pol;TL4100;;10;;0
+69;02/02/2023;01-2023;Tur, Oscar González;85;LS Siemens B25A 1pol;TL4100;;10;;10
+70;02/02/2023;01-2023;Tur, Oscar González;84;LS Siemens 1pol B20A;TL4100;;10;;1
+71;02/02/2023;01-2023;Tur, Oscar González;86;Dübel Fischer SX 6x30;TL4100;;5;;5
+72;02/02/2023;01-2023;Tur, Oscar González;87;Isoband Tesa Blau 19mm;TL4100;;10;;10
+73;02/02/2023;01-2023;Tur, Oscar González;88;Isoband Tesa Grün/Gelb 19mm;TL4100;;10;;10
+74;02/02/2023;01-2023;Tur, Oscar González;89;Isoband Tesa Schwarz 19mm;TL4100;;10;;10
+75;02/02/2023;01-2023;Tur, Oscar González;90;Isoband Tesa weiß 19mm;TL4100;;10;;10
+76;02/02/2023;01-2023;Tur, Oscar González;91;JUNG Wechselschalter 506 U ;TL4100;;10;;10
+77;02/02/2023;01-2023;Tur, Oscar González;93;Jung Steckd. A1520 alpinweiß;TL4100;;10;;10
+78;02/02/2023;01-2023;Tur, Oscar González;92;BJ Wechselschalter Duro 2000/6 US;TL4100;;10;;10
+79;14/02/2023;2-2023;Tur, Oscar González;98;Kabelbinder 280x4,5 Eltropa;TL4100;;1000;Werkstatt;1000
+80;14/02/2023;2-2023;Tur, Oscar González;99;Kabelbinder 100x2,5 Eltropa;TL4100;;1000;Werkstatt;1000
+81;14/02/2023;2-2023;Tur, Oscar González;95;LN INDV D/I 1200 42 W 4000 K;HL2200;8130002344;2;Weiterberechnung;2
+82;14/02/2023;2-2023;Tur, Oscar González;96;Starter ST111 OSRAM;TL4100;;100;;100
+83;14/02/2023;2-2023;Tur, Oscar González;97;Starter ST173 OSRAM;TL4100;;75;Werkstatt;75
+84;14/02/2023;2-2023;Tur, Oscar González;100;LED Philips CorePro 4.5W 840 2P G24d-1;ML1002;;20;Reparatur Beleuchtung;20
+85;14/02/2023;2-2023;Tur, Oscar González;101;HO 24 W/840 Osram;ML1001;;100;Reparatur Beleuchtung;100
+86;14/02/2023;2-2023;Tur, Oscar González;102;DULUX S/E 11 W/840;ML1016;;20;Reparatur Beleuchtung;20
+87;14/02/2023;2-2023;Tur, Oscar González;103;Kabelverschraubung M40x1,5 OBO;TL4100;;20;Werkstatt;20
+88;14/02/2023;2-2023;Tur, Oscar González;94;DCDC-Wandler 60V-24V PhoenixContact;IL4200;;2;Reparatur Energiezählersystem;2
+89;16/02/2023;2-2023;Tur, Oscar González;111;Schwenkhebel FZ535N Hager;ML1001;;1;Reparatur UV2 Ringeltaube;1
+90;16/02/2023;2-2023;Tur, Oscar González;110;Schubstangen FZ834N Hager;ML1001;;1;Reparatur UV2 Ringeltaube;1
+91;16/02/2023;2-2023;Tur, Oscar González;112;Schaltschrankschlüssel KNIPEX;TL4100;;5;Werkstatt;5
+92;16/02/2023;2-2023;Tur, Oscar González;113;Wechselschalter Busch-Jaeger 2000/6;TL4100;;10;Werkstatt;10
+93;16/02/2023;2-2023;Tur, Oscar González;80;Finder Zeitschaltuhr 230V 16A 1Wechsler;ML1003;;1;;1
+94;16/02/2023;2-2023;Tur, Oscar González;104;NYM-J 5x1,5mm²;TL4100;;100;Werkstatt;100
+95;16/02/2023;2-2023;Tur, Oscar González;105;NYM-J 3x2,5mm²;TL4100;;100;Werkstatt;100
+96;16/02/2023;2-2023;Tur, Oscar González;106;NYY-J 3x2,5mm²;TL4100;;100;Werkstatt;100
+97;16/02/2023;2-2023;Tur, Oscar González;107;NYY-J 5x2,5mm²;TL4100;;100;Werkstatt;100
+98;16/02/2023;2-2023;Tur, Oscar González;109;NYM-J 3x1,5mm²;TL4100;;100;Werkstatt;100
+99;24/02/2023;3-2023;Tur, Oscar González;114;Netzgerät 30V 3A Spannungsregler;IL3400-0003;;1;Reparatur Lastbank;1
+100;24/02/2023;3-2023;Tur, Oscar González;115;H07V-K 2,5 mm² Hellblau;TL4100;;200;Werkstatt;200
+101;24/02/2023;3-2023;Tur, Oscar González;116;H07V-K 2,5mm² Schwarz;TL4100;;100;Werkstatt;100
+102;24/02/2023;3-2023;Tur, Oscar González;117;H07V-K 1,5mm² Hellblau;TL4100;;100;Werkstatt;100
+103;24/02/2023;3-2023;Tur, Oscar González;119;Durchgangsklemme Blau 16mm²;TL4100;;25;;25
+104;27/02/2023;3-2023;Tur, Oscar González;118;PE-Durchgangsklemme 16mm² Grün/Gelb;TL4100;;25;Werkstatt;25
+105;27/02/2023;3-2023;Tur, Oscar González;120;Durchgangsklemme Blau 6mm² Siemens;TL4100;;50;;50
+106;27/02/2023;3-2023;Tur, Oscar González;121;PE-Durchgangsklemme Grün-Gelb 4mm²;TL4100;;50;Werkstatt;50
+107;27/02/2023;3-2023;Tur, Oscar González;122;Durchgangsklemme beige 2,5mm² SIEMENS;TL4100;;50;Werkstatt;50
+108;13/03/2023;3-2023;Tur, Oscar González;123;Netzteil 230V AC - +-15V DC 1A Traco Power;IL3102;;2;Reparatur Steuerung Fluggastbrücke 134;2
+109;13/03/2023;3-2023;Tur, Oscar González;124;TracoPower TMP-MK1 DIN-Befestigung für Netzteil TMP 15215C;IL3102;;2;Reparatur Steuerung Fluggastbrücke 134;2
+110;13/03/2023;3-2023;Tur, Oscar González;125;Schuko Stecker ABL Sursum grau 230V IP54;TL4100;;10;Werkstatt;10
+111;13/03/2023;3-2023;Tur, Oscar González;126;Aufputz-Kappe 2fach weiß AS 582 A W;TL4100;;5;Werkstatt;5
+112;13/03/2023;3-2023;Tur, Oscar González;127;Aufputz Steckdosen 2fach senkrecht ocea IP44;TL4100;;5;Werkstatt;5
+113;13/03/2023;3-2023;Tur, Oscar González;128;Aufputz-Steckdosen 2fach waagerecht IP44 ocean;TL4100;;5;Werkstatt;5
+114;14/03/2023;4-2023;Tur, Oscar González;129;Präsenzmelder Luxomat 92565;ML1058_BEL00;;2;Reparatur Bel. BC5;2
+115;14/03/2023;4-2023;Tur, Oscar González;130;SPOT LED 8W 4000K IP44 LEDVANCE;ML1001_BEL00;;2;Reparatur Bel. Grüne Lagune T.B.;2
+116;14/03/2023;4-2023;Tur, Oscar González;131;Spannungsregler MC7815CTG 15V 1A TO-220AB;IL3102;;5;Reparatur Netzteil Steuerung Joystick FGB;5
+117;14/03/2023;4-2023;Tur, Oscar González;132;LINEAR IndiviLED SUSPENSION KIT;ML1002_BEL00;;3;;1
+119;14/03/2023;4-2023;Tur, Oscar González;134;Zurrgurt mit Spannratsche | 25 mm x 5 m;IL3400;;4;Apron 4;4
+120;15/03/2023;4-2023;Tur, Oscar González;135;Endlosband Edelstahl 13mm/30m A2;IL2100;;1;Reparatur Straßenbeleuchtung;1
+121;15/03/2023;4-2023;Tur, Oscar González;136;Verschluss Endlosband Edelstahl 13mm A2;IL2100;;20;Reparatur Straßenbeleuchtung;20
+122;15/03/2023;4-2023;Tur, Oscar González;137;Lochband LK19/10E;IL3400;;1;Apron 4;1
+123;21/03/2023;4-2023;Tur, Oscar González;138;Wandsteckdose 422 Mennekes 32A;;9225982;1;Reparatur FB10 Tech-9688;1
+124;21/03/2023;4-2023;Tur, Oscar González;133;ABL Sursum Steckdosen Kombination Z 52.37;;9500641;1;Versicherungsfall;0
+125;22/03/2023;4-2023;Tur, Oscar González;139;ZCKE-Positionsschalterkopf;IL3102;;2;Reparatur FGB136;2
+126;22/03/2023;4-2023;Tur, Oscar González;140;Durchgangverbinder mit Hebel Wago;TL4100;;120;;120
+127;22/03/2023;4-2023;Tur, Oscar González;141;14510 Kupplung 16A 5p 6h;TL4100;;10;Werkstatt;10
+128;22/03/2023;4-2023;Tur, Oscar González;142;13510  Stecker 16A 5p 6h;TL4100;;10;Werkstatt;10
+129;22/03/2023;4-2023;Tur, Oscar González;143;14520  Kupplung 32A 5p 6h;TL4100;;5;Werkstatt;5
+130;22/03/2023;4-2023;Tur, Oscar González;16;Verbindungsdose i 12-L;TL4100;;20;Werkstatt;20
+131;22/03/2023;4-2023;Tur, Oscar González;17;Verbindungsdose Mini 25-L;TL4100;;20;Werkstatt;20
+132;22/03/2023;4-2023;Tur, Oscar González;144;Verschraubung M50 LGR;TL4100;;10;Werkstatt;10
+133;22/03/2023;4-2023;Tur, Oscar González;145;Gegenmutter LGR M50 x 1,5mm;TL4100;;10;Werkstatt;10
+134;22/03/2023;4-2023;Tur, Oscar González;146;LEDtube Philips 1500mm T8 865 24W EVG;ML2000;;100;Bel.Parkhaus;100
+135;22/03/2023;4-2023;Tur, Oscar González;147;LEDtube 1200mm T8 865 EVG 16W Philips;IL3102;;100;Bel.FGB;100
+136;22/03/2023;4-2023;Tur, Oscar González;14;LEDTube 1500mm 24W 840 T8 EVG;ML1001;;80;Bel.Term.B;80
+137;22/03/2023;4-2023;Tur, Oscar González;148;Si.Bel. SK.bez.Schild 40mm RZB;ML1003;;10;Sicherheitsbeleuchtung;10
+138;22/03/2023;4-2023;Tur, Oscar González;149;Flanschgerätestecker 16A 5p 400V 6h IP44;TL4100;;1;Werkstatt;0
+139;05/04/2023;5-2023;Tur, Oscar González;150;LED-Lampe BA9s Rot;IL3400;;10;Apron 4;10
+140;05/04/2023;5-2023;Tur, Oscar González;153;LED-Lampe BA9s Gelb;IL3400;;10;Apron 4;10
+141;05/04/2023;5-2023;Tur, Oscar González;154;LED-Lampe BA9s Grün;IL3400;;10;Apron 4;10
+142;05/04/2023;5-2023;Tur, Oscar González;156;Eaton M22-XD-S;IL3400;;1;Apron 4;1
+143;05/04/2023;5-2023;Tur, Oscar González;151;Eaton M22-XDL-R;IL3400;;20;Apron 4;20
+144;05/04/2023;5-2023;Tur, Oscar González;152;EATON M22-XL-Y;IL3400;;20;Apron 4;20
+145;05/04/2023;5-2023;Tur, Oscar González;155;Eaton M22-XL-R;IL3400;;20;Apron 4;20
+146;05/04/2023;5-2023;Tur, Oscar González;157;Eaton M22-XL-G;IL3400;;20;Apron 4;20
+147;05/04/2023;5-2023;Tur, Oscar González;158;OSRAM DULUX LED 6W G23;ML1002_BEL00;;20;Reparatur Bel.;0
+148;05/04/2023;5-2023;Tur, Oscar González;159;"Inbus Steckschlüssel 12mm 3/4"" 100mm";TL4100;;2;Werkstatt;2
+149;05/04/2023;5-2023;Tur, Oscar González;161;"Schlagnuss 3/4"" 17mm Mwk.";TL4100;;2;Werkstatt;0
+150;05/04/2023;5-2023;Tur, Oscar González;160;"Schlagnuss 3/4"" 19mm Mwk.";TL4100;;2;Werkstatt;0
+151;28/04/2023;5-2023;Tur, Oscar González;162;V-CG-SLS 500;ML1046_NBL00;;4;Reparatur Rettungszeichenleuchten Notlicht Hangar 3;4
+152;28/04/2023;5-2023;Tur, Oscar González;163;LEDtube MASTER 1500mm HO T8 840 20,5W;ML1002_BEL00;;40;;0
+153;28/04/2023;5-2023;Tur, Oscar González;164;Sammelschienenklemme 1,0 - 16 qmm;TL4100;;50;Werkstatt;50
+154;28/04/2023;5-2023;Tur, Oscar González;165;Prüfplakette Nächster Prüftermin 2023-2028 Gelb 30x30mm;TL4100;;70;Werkstatt (Prüfung von Leitern);70
+155;28/04/2023;5-2023;Tur, Oscar González;166;EasyLock-Fettkupplung;IL4200;;4;Notstrom Energiestationen;4
+156;28/04/2023;5-2023;Tur, Oscar González;105;NYM-J 3x2,5mm²;IL1305;9317123;100;Steckdoseninstallation;100
+157;28/04/2023;5-2023;Tur, Oscar González;167;Steckdosekombination AMAXX 950007;;8100024137;1;Weiterberechnung Mieter ALS;1
+158;28/04/2023;5-2023;Tur, Oscar González;168;Abzweigkasten Hensel 62000163 IP66;;8100024137;1;Weiterberechnung Mieter ALS;1
+159;28/04/2023;5-2023;Tur, Oscar González;169;NH-Sicherung 000 63A 500V Mersen;;8100024137;3;Weiterberechnung Mieter ALS;3
+160;28/04/2023;5-2023;Tur, Oscar González;170;Bügelschelle 28-34mm OBO;;8100024137;3;Weiterberechnung Mieter ALS;3
+161;28/04/2023;5-2023;Tur, Oscar González;144;Verschraubung M50 LGR;;8100024137;1;Weiterberechnung Mieter ALS;1
+162;28/04/2023;5-2023;Tur, Oscar González;145;Gegenmutter LGR M50 x 1,5mm;;8100024137;1;Weiterberechnung Mieter ALS;1
+163;28/04/2023;5-2023;Tur, Oscar González;103;Kabelverschraubung M40x1,5 OBO;;8100024137;2;Weiterberechnung Mieter ALS;2
+164;28/04/2023;5-2023;Tur, Oscar González;171;Gegenmutter M40 OBO;;8100024137;2;Weiterberechnung Mieter ALS;2
+165;28/04/2023;5-2023;Tur, Oscar González;172;YUASA NP7-6;IL4200;;5;Energiestationen;0
+166;28/04/2023;5-2023;Tur, Oscar González;173;Notleuchte Handscheinwerfer LED RZB 672317.003 ;IL4200;;3;Energiestationen;0
+167;09/05/2023;6-2023;Tur, Oscar González;7;DULUX L 18 W/840 2G11;ML1003_BEL00;;20;;0
+168;09/05/2023;6-2023;Tur, Oscar González;174;Einsatz Taster Alpinweiß AS590-5PWW;ML1001_ELT00;;10;Reparatur defekter Taster;0
+169;09/05/2023;6-2023;Tur, Oscar González;175;Kabelkanal 40x60mm 2m reinweiß;TL4100;;12;Werkstatt;12
+170;09/05/2023;6-2023;Tur, Oscar González;176;Verschraubung M32 PVC OBO Grau;TL4100;;20;Werkstatt;20
+171;09/05/2023;6-2023;Tur, Oscar González;177;Gegenmutter PVC M32 OBO;TL4100;;20;Werkstatt;20
+172;09/05/2023;6-2023;Tur, Oscar González;178;Installationsrohr M20 PVC grau;TL4100;;37;Werkstatt (1 Bund = 74m = 37 Stangen);38
+173;09/05/2023;6-2023;Tur, Oscar González;179;Steckdose A1520WW Jung A/AS;TL4100;;10;Werkstatt;0
+174;09/05/2023;6-2023;Tur, Oscar González;180;Trennscheibe 115x1x22,2mm Würth/Zebra;TL4100;;25;Werkstatt ;50
+175;09/05/2023;6-2023;Tur, Oscar González;181;Schnellbauschr. Feingew. 3,9x 45 TMN, HP E-NORMpro;TL4100;;500;Werkstatt;500
+176;09/05/2023;6-2023;Tur, Oscar González;182;Dübel DUOPOWER Fischer 6x50mm ;TL4100;;2;1 VPE = 100St.;2
+177;10/05/2023;6-2023;Tur, Oscar González;183;VG Tridonic 2x18W TC ECO;ML1001_BEL00;;5;Repartur Bel. Konferenzräume;0
+178;10/05/2023;6-2023;Tur, Oscar González;184;LCI 35W 350-900mA TOP SR;ML1001_BEL00;;5;Reparatur Bel. Term. B;0
+179;19/05/2023;6-2023;Tur, Oscar González;166;EasyLock-Fettkupplung;IL4200;;6;Netzersatzanlagen;0
+180;19/05/2023;6-2023;Tur, Oscar González;185;BRKanal Heidemann 200x13x6,5 rw;;8100024129;6;Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH;6
+181;19/05/2023;6-2023;Tur, Oscar González;179;Steckdose A1520WW Jung A/AS;;8100024129;6;Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH;0
+182;19/05/2023;6-2023;Tur, Oscar González;187;Jung 2fach Rahmen  AS582WW;;8100024129;3;Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH;0
+183;19/05/2023;6-2023;Tur, Oscar González;34;LF-Kanal PVC weiß 20x35mm;;8100024129;4;Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH;4
+184;19/05/2023;6-2023;Tur, Oscar González;188;D02 35A NEOZED;TL4100;;30;Werkstatt;0
+185;19/05/2023;6-2023;Tur, Oscar González;189;SKD 578-S 220-240V 50/60Hz;IL2100;;30;Straßenbeleuchtung landseitig;0
+186;19/05/2023;6-2023;Tur, Oscar González;190;BSN 250 K427-ITS 230/240V 50Hz BC2-160;IL2100;;5;Reparatur Straßenbeleuchtung landseitig;0
+187;30/05/2023;7-2023;Tur, Oscar González;186;Geräteeinbaudose Heidemann 70x70x50mm;;8100024129;6;Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH;0
+188;30/05/2023;7-2023;Tur, Oscar González;191;Endhalter Siemens 8WA1808;TL4100;;50;Werkstatt;50
+189;30/05/2023;7-2023;Tur, Oscar González;192;Eltako Relais 16A 250V 2 Wechsler;ML1001_BEL00;;1;Reparatur Beleuchtung;0
+190;30/05/2023;7-2023;Tur, Oscar González;193;CEAG Akku 3.7V 1S1P 7,4Wh;ML1029_NBL00;;2;Notbeleuchtung IL18;0
+191;30/05/2023;7-2023;Tur, Oscar González;194;Akku CEAG 3.7V / 4Ah 1S2P;ML1029_NBL00;;2;Notbeleuchtung IL18;0
+192;30/05/2023;7-2023;Tur, Oscar González;105;NYM-J 3x2,5mm²;TL4100;;100;Werkstatt;100
+193;30/05/2023;7-2023;Tur, Oscar González;195;Dreikant Nüsse M5 bis M12 BGS;TL4100;;1;Werkstatt;1
+194;30/05/2023;7-2023;Tur, Oscar González;196;Rundschlinge Grün 2T 3m;TL4100;;2;Werkstatt;2
+195;30/05/2023;7-2023;Tur, Oscar González;197;Rundschlinge Grün 2T 1,5m;TL4100;;2;Werkstatt;2
+196;30/05/2023;7-2023;Tur, Oscar González;198;Werma 221.300.75 Alarmlichtindikator 24 V Gelb;IL3400-00003;;10;Apron4;10
+197;30/05/2023;7-2023;Tur, Oscar González;199;LED-Leuchtmittel mit 15 SMD - BAY15d Sockel;IL3400-00003;;20;Apron 4;20
+198;30/05/2023;7-2023;Tur, Oscar González;200;AVIATICON Fett EP-07 400gr;IL3400-00003;;20;Apron 4;24
+199;30/05/2023;7-2023;Tur, Oscar González;201;Flachmeißel PB Swiss 18 / 125mm ;TL4100;;2;Werkstatt;2
+200;30/05/2023;7-2023;Tur, Oscar González;202;Sechskantmuttern A2 Edelstahl, M8X0,75;IL3400-00003;;100;Apron 4 (zu finden bei Schraubenbude.de 0934100F08075);100
+201;30/05/2023;7-2023;Tur, Oscar González;203;DIN 934 Sechskantmutter A4 Edelstahl M6;IL3400-00003;;100;Apron 4 (zu finden bei Schraubenbude.de 0934200M000061);100
+202;30/05/2023;7-2023;Tur, Oscar González;204;DIN 982 Sechskantmutter, selbstsichernd, hohe Form, A4 Edelstahl M 6;IL3400-00003;;200;Apron 4 (zu finden bei Schraubenbude.de 0982200M000063);200
+203;21/06/2023;8-2023;Tur, Oscar González;206;RZL MultiD 34m 36241;ML1016_NBL00;;2;Austausch Rettungszeichenleuchten;0
+204;21/06/2023;8-2023;Tur, Oscar González;207;RZL KUBUS 37015 Wandanbau;ML1027_NBL00;9226331;1;Austausch defekte Rettungzeichenleuchte;0
+205;21/06/2023;8-2023;Tur, Oscar González;208;Akku Acculux 4V/3,5Ah SL5;ML1003_ELT00;;4;Austausch der Akkus von den vorhandenen Handscheinwerfern in den Elektroräume;0
+206;21/06/2023;8-2023;Tur, Oscar González;209;Spiralkabel 3G2,5 BL400;IL1301;9317339;2;Anfertigung Ladekabel Feuerwehr;0
+207;21/06/2023;8-2023;Tur, Oscar González;211;STECKER POWERTOP 3796 16A 230V 3p 6h;IL1301;9317339;2;Anfertigung Ladekabel Feuerwehr;0
+208;21/06/2023;8-2023;Tur, Oscar González;210;KUPPLUNG POWERTOP 3860 MENNEKES;IL1301;9317339;2;Anfertigung Ladekabel Feuerwehr;0
+209;30/06/2023;8-2023;Tur, Oscar González;215;Handcrimpzange MP2 W90618;TL4100;;1;Werkstatt;0
+210;30/06/2023;8-2023;Tur, Oscar González;216;Crimpeinsatz W9060812 25/50mm² Aderendhülsen;TL4100;;1;Werkstatt;0
+211;30/06/2023;8-2023;Tur, Oscar González;217;Crimpeinsatz W9060811 16-35 mm² Aderendhülsen;TL4100;;1;Werkstatt;0
+212;30/06/2023;8-2023;Tur, Oscar González;214;WINKELSTECKER 3266 400V 5p 6h 32A;ML1003;9226137;1;Reparatur Stecker;0
+213;30/06/2023;8-2023;Tur, Oscar González;221;GIPSKARTONDÜBEL W-GS TYP ZD AUS ZINKDRUCKGUSS 14,5x33mm;TL4100;;200;Werkstatt;0
+214;30/06/2023;8-2023;Tur, Oscar González;220;Cooper Blessing (CEAG) Akku NiMH  4,8V / 1,25Ah ;ML1029_NBL00;;4;Kontrollpunkt 2;0
+215;30/06/2023;8-2023;Tur, Oscar González;220;Cooper Blessing (CEAG) Akku NiMH  4,8V / 1,25Ah ;ML1002_NBL00;;1;VWG Notbel.;0
+216;30/06/2023;8-2023;Tur, Oscar González;219;Akku NiMh 7,2V/ 600mAh Beghelli;ML1014_NBL00;;4;KFH Notbel.;0
+217;30/06/2023;8-2023;Tur, Oscar González;219;Akku NiMh 7,2V/ 600mAh Beghelli;ML1039_NBL00;;5;VGK Notbel.;0
+218;30/06/2023;8-2023;Tur, Oscar González;218;Akku Ni-Cd 3,6V/4,0 Ah AXCOM ;ML1014_NBL00;;4;KFH Notbel.;0
+219;30/06/2023;8-2023;Tur, Oscar González;218;Akku Ni-Cd 3,6V/4,0 Ah AXCOM ;ML1039_NBL00;;9;VGK Notbel.;0
+220;30/06/2023;8-2023;Tur, Oscar González;212;DULUX 9W 4000K 4p.;ML1001_NBL00;;20;Term.B Notbel.;0
+221;30/06/2023;8-2023;Tur, Oscar González;213;ESYLUX LED-Rundleuchte EO10850103 300mm;ML1016;980000000007;1;Reparatur Bel. Toilette;0
+222;30/06/2023;8-2023;Tur, Oscar González;224;Philips LED EEK E (A - G) E27  13 W Warmweiß ;ML1001_BEL00;;10;;0
+223;30/06/2023;8-2023;Tur, Oscar González;225;Philips LED  E27  8 W Warmweiß ;ML1001_BEL00;;10;;0
+224;30/06/2023;8-2023;Tur, Oscar González;226;Philips LED  E27 6 W Warmweiß ;ML1001_BEL00;;10;;0
+225;30/06/2023;8-2023;Tur, Oscar González;227;SHTZMAT-MECH 80X320X36MM;TL4100;;3;Werkstatt;0
+226;04/07/2023;9-2023;Tur, Oscar González;228;14520  Kupplung 32A 5p 6h;ML1002_BEL00;;30;Reparatur Beleuchtung;0
+226;01/08/2023;9-2023;Tur, Oscar González;143;;TL4100;;5;Werkstatt;
+227;01/08/2023;9-2023;Tur, Oscar González;138;Wandsteckdose 422 Mennekes 32A;TL4100;;3;Werkstatt;0
+228;01/08/2023;9-2023;Tur, Oscar González;98;Kabelbinder 280x4,5 Eltropa;TL4100;;500;Werkstatt;0
+229;01/08/2023;9-2023;Tur, Oscar González;229;Eltropa Kabelbinder 200x4,5mm ;TL4100;;500;Werkstatt;0
+230;01/08/2023;9-2023;Tur, Oscar González;230;Eltropa Kabelbinder 360x4,5mm ;TL4100;;300;Werkstatt;0
+231;01/08/2023;9-2023;Tur, Oscar González;231;Linsenkopfschraube 4x40mm Kreuz;TL4100;;200;Werkstatt;0
+232;01/08/2023;9-2023;Tur, Oscar González;232;Feinsicherung 3,15A 250V Keramik;ML1001_NBL00;;100;Sicherheitsbeleuchtung ;0
+233;01/08/2023;9-2023;Tur, Oscar González;233;Stecker Mennekes 32A 400V 5p 6h;TL4100;;10;Werkstatt;0
+234;01/08/2023;9-2023;Tur, Oscar González;234;Ringmaulschlüsselsatz 11 teilig Wera;TL4100;;1;Werkzeugausstattung (Herr Kulf);0
+235;01/08/2023;9-2023;Tur, Oscar González;179;Steckdose A1520WW Jung A/AS;TL4100;;10;Werkstatt;0
+236;08/08/2023;9-2023;Tur, Oscar González;235;DL ALU DN 200 25 W 3000 K IP44/IP20 WT;Kdnr.: 12018055;8100024196;1;Austausch Leuchte Tui Travel Star;0
+237;09/08/2023;9-2023;Tur, Oscar González;236;Abzweigkasten Hensel  77 x 130 x 130 mm Lichtgrau IP66;IL4302;9317411;1;;0
+238;09/08/2023;9-2023;Tur, Oscar González;245;Abstandschelle 30-36mm OBO Stahl;IL4302;IL4302;10;;0
+239;09/08/2023;9-2023;Tur, Oscar González;243;Stapa Rohr M32 3m;IL4302;9317411;3;;0
+240;09/08/2023;9-2023;Tur, Oscar González;244;Galvanisch verzinkte Stahlmuffe M32;IL4302;9317411;5;;0
+241;09/08/2023;9-2023;Tur, Oscar González;242;LS B10A MBN110;IL4302;9317411;1;;0
+242;09/08/2023;9-2023;Tur, Oscar González;82;LS MBN116 1pol B16A;IL4302;9317411;2;;0
+243;09/08/2023;9-2023;Tur, Oscar González;237;NYY-J 5x4mm²;IL4302;9317411;100;;0
+244;09/08/2023;9-2023;Tur, Oscar González;104;NYM-J 5x1,5mm²;TL4100;;100;Werkstatt;0
+245;09/08/2023;9-2023;Tur, Oscar González;105;NYM-J 3x2,5mm²;TL4100;;100;Werkstatt;0
+246;09/08/2023;9-2023;Tur, Oscar González;109;NYM-J 3x1,5mm²;TL4100;;100;Werkstatt;0
+247;09/08/2023;9-2023;Tur, Oscar González;107;NYY-J 5x2,5mm²;TL4100;;100;Werkstatt;0
+248;09/08/2023;9-2023;Tur, Oscar González;246;Kantenschutz 9,5mm PROMAT;TL4100;;10;Werkstatt;0
+249;09/08/2023;9-2023;Tur, Oscar González;247;Kantenschutz 14,5mm PROMAT;TL4100;;10;Werkstatt;0
+250;10/08/2023;9-2023;Tur, Oscar González;248;EVG 13.3 V-CG-S EATON;ML1003_NBL00;;10;Reparatur Sicherheitsbeleuchtung;0
+251;10/08/2023;9-2023;Tur, Oscar González;249;Kotflügelscheibe 5.3x20 mm Stahl verzinkt 100 St. SWG;TL4100;;2;Werkstatt;0
+252;10/08/2023;9-2023;Tur, Oscar González;250;Kotflügelscheibe 6.4x20 mm Stahl verzinkt 100 St. SWG;TL4100;;2;Werkstatt;0
+253;10/08/2023;9-2023;Tur, Oscar González;251;Kotflügelscheibe 5.3x20 mm Stahl verzinkt 50 St. SWG;TL4100;;2;Werkstatt;0
+254;10/08/2023;9-2023;Tur, Oscar González;252;Kontaktspray 400ml WD40;TL4100;;6;Werkstatt;0
+255;10/08/2023;9-2023;Tur, Oscar González;254;BK Unterteil Hager 2m 130x60mm Weiß;TL4100;;4;Werkstatt;0
+256;10/08/2023;9-2023;Tur, Oscar González;255;BK Oberteil Hager 2m 80mm Weiß;TL4100;;6;Werkstatt;0
+257;10/08/2023;9-2023;Tur, Oscar González;256;Kleinverteiler 2 reihig Spelsberg 73342801 IP65;IL4302;9317411;1;;0
+258;10/08/2023;9-2023;Tur, Oscar González;257;HC-B24-I-PT-F - Kontakteinsatz;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+259;10/08/2023;9-2023;Tur, Oscar González;258;HC-B24-I-PT-M - Kontakteinsatz;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+260;10/08/2023;9-2023;Tur, Oscar González;259;Han 24B-HBM IP 67 w. self-locking cover;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+261;10/08/2023;9-2023;Tur, Oscar González;260;Han B Hood Coupler HC 2 Levers PG 29;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+262;10/08/2023;9-2023;Tur, Oscar González;261;SKV 29 KABELVERSCHRAUBUNG HARTING;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+263;10/08/2023;9-2023;Tur, Oscar González;263;HC-B10-I-PT-F - Kontakteinsatz;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+264;10/08/2023;9-2023;Tur, Oscar González;264;HC-B10-I-PT-M - Kontakteinsatz;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+265;10/08/2023;9-2023;Tur, Oscar González;265;Han B Hood Coupler HC 2 Levers M32;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+266;10/08/2023;9-2023;Tur, Oscar González;266;Han B Hood Top Entry HC 4 Pegs M32;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+267;10/08/2023;9-2023;Tur, Oscar González;267;Han B 10 Profile Sealing;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+268;11/08/2023;9-2023;Tur, Oscar González;268;Han B 24 Profile Sealing;IL3102;;1;Fluggastbrücke 134, Stecker wechseln;0
+269;11/08/2023;9-2023;Tur, Oscar González;269;Schriftband DYMO 12mm sw auf ws;TL4100;;10;Werkstatt;0
+270;11/08/2023;9-2023;Tur, Oscar González;270;Schriftband DYMO D1 45018 gelb auf schwarz 12 mm 7 m;TL4100;;5;Werkstatt;0
+271;11/08/2023;9-2023;Tur, Oscar González;271;Schriftband DYMO D1 43613  Weiß  Schwarz 6 mm 7 m;TL4100;;5;Werkstatt;0
+272;11/08/2023;9-2023;Tur, Oscar González;272;Schriftband DYMO D1 40913 Weiß Schwarz 9 mm 7 m;TL4100;;10;Werkstatt;0
+273;11/08/2023;9-2023;Tur, Oscar González;273;BJ Taster Aufputz 2621 W-53-206;TL4100;;10;Werkstatt;0
+274;11/08/2023;9-2023;Tur, Oscar González;274;Hager Doppelsteckdose tehalit Fußleistekanal reinweiß;TL4100;;3;Werkstatt;0
+275;11/08/2023;9-2023;Tur, Oscar González;275;Wagoklemme 221-412-1 0,14-4mm² flexibel 2fach;TL4100;;500;Werkstatt;0
+276;11/08/2023;9-2023;Tur, Oscar González;276;Wagoklemme 221-413-1 0,14-4mm² 3fach flexibel;TL4100;;500;Werkstatt;0
+277;11/08/2023;9-2023;Tur, Oscar González;278;Wandsteckdose 16A 5pol. 400V 6h Mennekes;TL4100;;5;Werkstatt;0
+278;11/08/2023;9-2023;Tur, Oscar González;277;Wandsteckdose 32A 5pol. 400V 6h Mennekes;TL4100;;5;Werkstatt;0
+279;11/08/2023;9-2023;Tur, Oscar González;279;CLAS B 60 P 5.5W 827 FIL CL E14;ML1001_BEL00;;20;;0
+280;11/08/2023;9-2023;Tur, Oscar González;280;EVG OSRAM 1x 26-42W;ML1001_BEL00;;20;;0
+281;11/08/2023;9-2023;Tur, Oscar González;280;EVG OSRAM 1x 26-42W;ML1003_BEL00;;20;;0
+282;16/08/2023;9-2023;Tur, Oscar González;281;Schuko Kupplung ABL IP54 250V 16A;TL4100;;5;Werkstatt;0

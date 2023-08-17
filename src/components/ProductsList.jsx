@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../config/firebase';
 
-import { getDocs, collection, deleteDoc, doc } from 'firebase/firestore';
+import { getDocs, collection, deleteDoc, doc, orderBy, query } from 'firebase/firestore';
 import { Modal } from 'react-bootstrap';
 
 import ProductForm from './ProductForm';
@@ -30,8 +30,9 @@ const ProductsList = () => {
     
     try {
       let productCollection = collection(db, 'products');
+      const q = query(productCollection, orderBy("productID", "desc"));
       const data = [];
-      await getDocs(productCollection)
+      await getDocs(q)
         .then(snap => {
           snap.forEach(doc => {
             data.push(Object.assign(doc.data(), {"id": doc.id}));

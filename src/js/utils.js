@@ -76,7 +76,7 @@ export function exportToExcel(data, filename = 'data') {
 //función para guardar los items de cartItems en firestore dentro de orders, una vez obtenida una respuesta de firestore de que los elementos se han guardado correctamente se borran todos los items de la colección items
 //cada entrada de entries obtendrá un número ordinal identificativo, es decir, el numero de entrada de esa colección. Además se almacenara el 
 //numero de order, que será pasado como parametro a la función.
-export async function saveCartItemsToFirestore(cartItems, orderNumber) {
+export async function saveCartItemsToFirestore(cartItems, orderNumber, order) {
   
   let index = await getHighestFieldValue('entries', 'entryNumber');
 
@@ -88,6 +88,7 @@ export async function saveCartItemsToFirestore(cartItems, orderNumber) {
 
     //añadimos el numero de order a cada item
     cartItem.orderNumber = orderNumber;
+    cartItem.order = order;
 
     //añadimos el numero de entrada de la colección a cada item
     index = index + 1;

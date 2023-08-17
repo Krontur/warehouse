@@ -31,7 +31,7 @@ const ShoppingCartComponent = () => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
                     })
                 });
-            const columnOrder = ["Position", "date", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "unit", "id", "comment"];
+            const columnOrder = ["Position", "date", "order", "orderNumber", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "unit", "id", "comment"];
             const reorderedData = data.map(row => {
                 return columnOrder.reduce((obj, key) => {
                     obj[key] = row[key];
@@ -53,7 +53,7 @@ const ShoppingCartComponent = () => {
     const handleSendClick = (cartItems, order, orderNumber) => {
         exportToExcel(cartItems, order);
         alert("Your Order has been sent to the server");
-        saveCartItemsToFirestore(cartItems, orderNumber);
+        saveCartItemsToFirestore(cartItems, orderNumber, order);
         navigate("/shoppingcart");
     };
 

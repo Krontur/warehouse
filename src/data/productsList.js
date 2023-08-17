@@ -1,4 +1,4 @@
-export const products = [
+export const productList = [
     {
       description: "Laptop Gamer 15 pulgadas",
       EANCode: "0012345678910",

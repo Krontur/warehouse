@@ -65,6 +65,7 @@ const PurchaseHistoryComponent = () => {
                     <tr>
                         <th>Buchungsnummer</th>
                         <th>Datum der Buchung</th>
+                        <th>Nutzer</th>
                         <th>Bestellnummer</th>
                         <th>Produkt ID</th>
                         <th>EAN-Code</th>
@@ -73,7 +74,8 @@ const PurchaseHistoryComponent = () => {
                         <th>Beschreibung</th>
                         <th>Kostenstelle</th>
                         <th>Auftragsnummer</th>
-                        <th>Menge</th>
+                        <th>bestellte Menge</th>
+                        <th>erhaltene Menge</th>
                         <th>Einheit</th>
                     </tr>
                 </thead>
@@ -82,7 +84,8 @@ const PurchaseHistoryComponent = () => {
                         <tr key={entry.entryNumber}>
                             <td>{entry.entryNumber}</td>
                             <td>{entry.date}</td>
-                            <td>{entry.orderNumber}</td>
+                            <td>{entry.user}</td>
+                            <td>{entry.order}</td>
                             <td>{entry.productID}</td>
                             <td>{entry.EANCode}</td>
                             <td>{entry.productNumber}</td>
@@ -91,6 +94,7 @@ const PurchaseHistoryComponent = () => {
                             <td>{entry.costcenter}</td>
                             <td>{entry.jobnumber}</td>
                             <td>{entry.quantity}</td>
+                            <td>{entry.received}</td>
                             <td>{entry.unit}</td>
                         </tr>
                     ))}
