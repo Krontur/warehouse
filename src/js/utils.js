@@ -2,11 +2,14 @@ import { db } from '../config/firebase';
 import { query, orderBy, limit, getDocs, collection, addDoc, deleteDoc, doc } from "firebase/firestore";
 import { utils, writeFile } from 'xlsx';
 
-export async function getHighestFieldValue(collectionName, fieldName) {
+export async function getHighestFieldValue(collectionName, fieldName, fieldName2) {
+  
+  const field = fieldName2 ? fieldName2 : fieldName;
+  console.log(field);
   // Crea la consulta
   const q = query(
     collection(db, collectionName), 
-    orderBy(fieldName, 'desc'), 
+    orderBy( field , 'desc'), 
     limit(1)
   );
 
@@ -15,7 +18,8 @@ export async function getHighestFieldValue(collectionName, fieldName) {
 
   // Si se obtuvo un resultado, retorna el valor más alto
   if (!querySnapshot.empty) {
-    return querySnapshot.docs[0].data()[fieldName];
+    console.log(querySnapshot.docs[0].data()[ fieldName ] + querySnapshot.docs[0].data()[ fieldName2 ]);
+    return querySnapshot.docs[0].data()[ fieldName ];
   } else {
     return null;
   }

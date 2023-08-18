@@ -22,9 +22,9 @@ const PurchaseHistoryComponent = () => {
 
     const getPurchaseHistory = async () => {
         try {
-            let histCollection = collection(db, 'entries');
+            let histCollection = collection(db, 'orders');
             const data = [];
-            await getDocs(query(histCollection, orderBy('entryNumber')))
+            await getDocs(query(histCollection, orderBy('entryNumber', 'desc')))
                 .then(snap => {
                     snap.forEach(doc => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
@@ -68,15 +68,14 @@ const PurchaseHistoryComponent = () => {
                         <th>Nutzer</th>
                         <th>Bestellnummer</th>
                         <th>Produkt ID</th>
-                        <th>EAN-Code</th>
-                        <th>Art.Nr.</th>
                         <th>Hersteller</th>
                         <th>Beschreibung</th>
                         <th>Kostenstelle</th>
                         <th>Auftragsnummer</th>
-                        <th>bestellte Menge</th>
-                        <th>erhaltene Menge</th>
+                        <th>bestellt</th>
+                        <th>erhalten</th>
                         <th>Einheit</th>
+                        <th>Kommentar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -87,8 +86,6 @@ const PurchaseHistoryComponent = () => {
                             <td>{entry.user}</td>
                             <td>{entry.order}</td>
                             <td>{entry.productID}</td>
-                            <td>{entry.EANCode}</td>
-                            <td>{entry.productNumber}</td>
                             <td>{entry.producer}</td>
                             <td>{entry.description}</td>
                             <td>{entry.costcenter}</td>
@@ -96,6 +93,7 @@ const PurchaseHistoryComponent = () => {
                             <td>{entry.quantity}</td>
                             <td>{entry.received}</td>
                             <td>{entry.unit}</td>
+                            <td>{entry.comment}</td>
                         </tr>
                     ))}
                 </tbody>

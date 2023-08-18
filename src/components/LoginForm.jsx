@@ -1,40 +1,26 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
-import { makeStyles } from '@mui/styles';
-import { auth } from '../config/firebase';
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
 
-const useStyles = makeStyles(() => ({
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-}));
 
 const LoginForm = () => {
-  const classes = useStyles();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const {signIn, user} = UserAuth();
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-       .then((userCredential) => {
-        console.log( userCredential.user.email + "se ha logueado" )
+    await signIn(email, password);
+    console.log( user.email + "se ha logueado" );
       // Usuario ha iniciado sesión exitosamente
       navigate("/");
-    })
-    .catch ((error) => {
-      console.error(error);
-      // Maneja los errores aquí
-    });
-    };
+    }
 
   return (
-    <form className={classes.form} onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <TextField
         label="Correo"
         value={email}
@@ -46,7 +32,7 @@ const LoginForm = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <Button variant="contained" color="primary" type="submit">Iniciar sesión</Button>
+      <Button variant="contained" color="primary" type="submit">Anmelden</Button>
     </form>
   );
 };

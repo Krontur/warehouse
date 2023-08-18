@@ -40,7 +40,7 @@ const ShoppingCartComponent = () => {
             });
             setCartItems(reorderedData);
         
-            setLastOrder( await getHighestFieldValue('entries', 'orderNumber'));
+            setLastOrder( await getHighestFieldValue('orders', 'orderNumber', 'entryNumber'));
         } catch (error) {
             console.error(error);
         }
@@ -48,7 +48,7 @@ const ShoppingCartComponent = () => {
     
     useEffect(() => {
             getCartItems();
-    }, []);
+    }, [lastOrder]);
 
     const handleSendClick = (cartItems, order, orderNumber) => {
         exportToExcel(cartItems, order);
