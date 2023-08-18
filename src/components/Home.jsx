@@ -1,12 +1,15 @@
 import React from 'react';
+import { UserAuth } from '../context/AuthContext';
 
 import logo from '../static/img/Leipzig-Halle_Airport_Logo.svg.svg';
 import '../css/App.css'
 
 const Home = () => {
+    const {isLoggedIn, user} = UserAuth();
     return (
         <div className="App">
             <header className="App-header">
+                {isLoggedIn ? <h2>Willkommen {user.email}</h2> : <></>}
                 <object data={logo} className="App-logo" alt="logo"></object>
             </header>
         </div>

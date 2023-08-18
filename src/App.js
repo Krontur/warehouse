@@ -9,14 +9,16 @@ import ProductForm from './components/ProductForm';
 import ShoppingCartComponent from './components/ShoppingCartComponent';
 import PurchaseHistoryComponent from './components/PurchaseHistoryComponent';
 import AddCartItemForm from './components/AddCartItemForm';
+import { AuthContextProvider } from './context/AuthContext';
 
 //import { addProductsToFirestore } from './test/addProductsToFirestore';
-//import { addItemsToCartToFirestore } from './test/addItemsToCartToFirestore';
+//import { addOrdersToFirestore } from './test/addOrdersToFirestore';
 
 import './css/App.css';
 
 function App() {
   return (
+    <AuthContextProvider>
     <Router>
         <NavbarComponent/>
         <Routes>
@@ -30,6 +32,7 @@ function App() {
           <Route path='/purchasehistory' element={<PurchaseHistoryComponent/>} />
         </Routes>
     </Router>
+    </AuthContextProvider>
   );
 }
 
