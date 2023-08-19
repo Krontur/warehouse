@@ -75,3 +75,7 @@
     background-color: #15202B;
     color: #1DA1F2;
   }
+
+  .hist-table .quantityField{
+    justify-content: space-around;
+  } 
