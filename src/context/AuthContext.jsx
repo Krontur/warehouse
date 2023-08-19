@@ -5,7 +5,6 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../config/firebase";
-import { getFieldsByEmail } from "../js/utils";
 
 const UserContext = createContext();
 
