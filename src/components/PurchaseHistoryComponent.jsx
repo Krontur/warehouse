@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../config/firebase';
-import { getDocs, collection, orderBy, query } from 'firebase/firestore';
+import { getDocs, collection, orderBy, query, updateDoc, doc } from 'firebase/firestore';
 
 import SearchBar from './SearchBar';
 
@@ -74,13 +74,17 @@ const PurchaseHistoryComponent = () => {
                         <th>Auftragsnummer</th>
                         <th>bestellt</th>
                         <th>erhalten</th>
+                        <th></th>
                         <th>Einheit</th>
                         <th>Kommentar</th>
                     </tr>
                 </thead>
                 <tbody>
                     {purchaseHistory.map(entry => (
-                        <tr key={entry.entryNumber}>
+                        <tr key={entry.entryNumber} style={{
+                                backgroundColor: entry.received >= entry.quantity ? 'lightgreen' : '',
+                                color: entry.received >= entry.quantity ? 'black' : '',
+                            }}>
                             <td>{entry.entryNumber}</td>
                             <td>{entry.date}</td>
                             <td>{entry.user}</td>
@@ -91,7 +95,33 @@ const PurchaseHistoryComponent = () => {
                             <td>{entry.costcenter}</td>
                             <td>{entry.jobnumber}</td>
                             <td>{entry.quantity}</td>
-                            <td>{entry.received}</td>
+                            <td>
+                                {entry.received}
+                            </td>
+                            <td>
+                                
+                                <button 
+                                    onClick={() => {
+                                    const addProduct = prompt("Anzahl der neuen empfangenen Produkte");
+
+                                    if(addProduct) {
+                                        const newReceived = parseInt(entry.received) + parseInt(addProduct);
+
+                                        const orderRef = doc(db, "orders", entry.id);
+
+                                        updateDoc(orderRef, {
+                                        received: newReceived
+                                        })
+                                        .then(() => {
+                                        getPurchaseHistory(); 
+                                        });
+                                    }
+                                    }}
+                                >
+                                    +
+                                </button>
+
+                            </td>
                             <td>{entry.unit}</td>
                             <td>{entry.comment}</td>
                         </tr>
