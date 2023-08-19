@@ -57,7 +57,7 @@ const ProductForm = ({ product, afterSave }) => {
     <form onSubmit={handleSubmit} className="product-form">
       <div className="form-group">
         <label>Beschreibung:</label>
-        <input type="text" name="description" value={formData.description} onChange={handleChange} />
+        <textarea rows = "5" cols="100" wrap='soft' name="description" value={formData.description} onChange={handleChange} />
       </div>
       
       <div className="form-group">

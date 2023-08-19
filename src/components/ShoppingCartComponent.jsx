@@ -8,12 +8,15 @@ import { getHighestFieldValue, exportToExcel, saveCartItemsToFirestore } from '.
 import '../css/ShoppingCartComponent.css';
 import AddCartItemForm from './AddCartItemForm';
 
+import { UserAuth } from '../context/AuthContext';
+
 const ShoppingCartComponent = () => {
     const [lastOrder, setLastOrder] = useState(null);
     const [cartItems, setCartItems] = useState([]);
     const [selectedItem, setSelectedItem] = useState(null); 
     const [showModalEdit, setShowModalEdit] = useState(false);
     const navigate = useNavigate();
+    const {role, isLoggedIn} = UserAuth();
 
     //setLastOrder(getHighestFieldValue('orders', 'orderNumber'))
 
@@ -83,7 +86,7 @@ const ShoppingCartComponent = () => {
         <>
         <div className="shopping-cart">
             <h1>Bestellung {order}</h1>
-            <h2>Warenkorb <button onClick={()=> {handleSendClick(cartItems, order, orderNumber)}}>SENDEN</button></h2>
+            { isLoggedIn && role !=='admin' ? <h2>Warenkorb</h2> : <h2>Warenkorb <button onClick={()=> {handleSendClick(cartItems, order, orderNumber)}}>SENDEN</button></h2>}
             
             <table className="cart-table" id='cartItems'>
                 <thead>

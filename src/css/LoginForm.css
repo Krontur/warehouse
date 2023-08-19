@@ -1,64 +1,60 @@
-.product-form {
+.login-form {
     background-color: #15202B;
     padding: 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.product-form .form-group {
-    margin-bottom: 15px;
-    max-width: 75vw;
-    width: 30vw;
+.login-form form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.product-form label {
-    display: block;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 5px;
-}
-
-.product-form input[type="text"], 
-.product-form input[type="number"],
-.product-form textarea {
+.login-form form input[type="text"], 
+.login-form form input[type="password"] {
     width: 100%;
     padding: 8px;
+    margin: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background-color: #253341;
     color: white;
     border-radius: 5px;
 }
 
-.product-form input[type="text"]:focus, 
-.product-form input[type="number"]:focus,
-.product-form textarea:focus {
+.login-form form input[type="text"]:focus, 
+.login-form form input[type="password"]:focus {
     outline: none;
     border-color: #1DA1F2;
     box-shadow: 0 0 0 2px rgba(29, 161, 242, 0.5);
 }
 
-.product-form button {
+.login-form span{
+    color: #ecedee !important;
+}
+
+.login-form form button {
     background-color: #1DA1F2;
     color: #15202B;
-    width: 100%;
-    margin-top: 15px;
     padding: 10px 15px;
+    margin-top: 2rem !important;
     border: none;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
+    width: 100%;
 }
 
-.product-form button:hover {
+.login-form form button:hover {
     background-color: #15202B;
     color: #1DA1F2;
 }
 
-h1 {
+.login-form h2 {
     color: #ecedee;
-    background-color: #1DA1F2;
     display: flex;
     justify-content: center;
 }

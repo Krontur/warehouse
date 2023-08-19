@@ -27,7 +27,8 @@
     background-color: #1DA1F2; /* Color azul claro de Twitter para el toggler icon */
 }
 
-.custom-navbar .nav-link {
+.custom-navbar .nav-link,
+.custom-navbar .navbar {
     font-size: 1rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.8); /* Color blanco con transparencia para los enlaces */
@@ -35,6 +36,16 @@
     padding: 8px 10px;
     transition: color 0.2s;
     display: inline-flex;
+}
+
+.navbar {
+    display: flexbox;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar svg{
+    margin-left: 3px;
 }
 
 .custom-navbar .nav-link:hover {
