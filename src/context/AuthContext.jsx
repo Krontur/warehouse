@@ -5,12 +5,14 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../config/firebase";
+import { getFieldsByEmail } from "../js/utils";
 
 const UserContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [role, setRole] = useState('user');
 
     const logOut = () => {
         signOut(auth)
@@ -25,36 +27,39 @@ export const AuthContextProvider = ({ children }) => {
             });
     };
 
-    const signIn = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                setUser(user);
-                setIsLoggedIn(true);
-                console.log(user);
-                // ...
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, errorMessage);
-            });
+    const signIn = async (email, password) => {
+      try{
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        await setUser(user);
+        await localStorage.setItem('user-token',  user.getIdToken());
+        setIsLoggedIn(true);
+        await setRole(user.photoURL);
+      } catch (error){
+        console.log(error);
+      }
     };
 
     
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      const user = currentUser;
+      if (user) {
+        setIsLoggedIn(true);
+        setRole(user.photoURL);
+      } else {
+        setIsLoggedIn(false);
+      }
       setUser(currentUser);
       console.log('User', currentUser)
     });
-    return () => {
-      unsubscribe();
+    return async () => {
+      await unsubscribe();
     };
   }, []);
 
   return (
-    <UserContext.Provider value={ {user, signIn, logOut, isLoggedIn} }>
+    <UserContext.Provider value={ {user, signIn, logOut, isLoggedIn, role, setIsLoggedIn} }>
       {children}
     </UserContext.Provider>
   );

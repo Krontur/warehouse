@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import '../css/SearchBar.css';
 import { FaFilterCircleXmark, FaMagnifyingGlass } from 'react-icons/fa6'
-import { useNavigate } from 'react-router-dom';
 
 const SearchBar = ({ onSearch, placeholder }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const navigate = useNavigate();
+  
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);

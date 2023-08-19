@@ -1,5 +1,5 @@
 import { db } from '../config/firebase';
-import { query, orderBy, limit, getDocs, collection, addDoc, deleteDoc, doc } from "firebase/firestore";
+import { query, orderBy, limit, getDocs, where, collection, addDoc, deleteDoc, doc } from "firebase/firestore";
 import { utils, writeFile } from 'xlsx';
 
 export async function getHighestFieldValue(collectionName, fieldName, fieldName2) {
@@ -105,3 +105,23 @@ export async function saveCartItemsToFirestore(cartItems, orderNumber, order) {
   });
 }
 
+export async function getFieldsByEmail(email) {
+
+  const q = query(collection(db, "users"), where("email", "==", email));
+  
+  const querySnapshot = await getDocs(q);
+
+  let user = null;
+  
+  querySnapshot.forEach(doc => {
+    if (doc.email === email) {
+      user = {
+        role: doc.role,
+        displayName: doc.displayName  
+      };
+    }
+  });
+
+  return user;
+
+}

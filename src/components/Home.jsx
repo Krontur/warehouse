@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className="App">
             <header className="App-header">
-                {isLoggedIn ? <h2>Willkommen {user.email}</h2> : <></>}
+                {isLoggedIn ? <h2>Hallo {user.displayName}</h2> : <h2>Hallo melde dich an</h2>}
                 <object data={logo} className="App-logo" alt="logo"></object>
             </header>
         </div>

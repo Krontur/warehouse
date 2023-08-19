@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { auth } from '../config/firebase';
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 const useStyles = makeStyles(() => ({
   form: {
@@ -17,15 +17,30 @@ const RegisterForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [displayName, setDisplayName] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      console.error("Las contraseñas no coinciden");
+      alert("Las contraseñas no coinciden");
       return;
     }
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      await createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          updateProfile(user, {
+            displayName: displayName,
+          })
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+          // ..
+        });
+        alert('Usuario creado con éxito');
       // Usuario registrado exitosamente
       
     } catch (error) {
@@ -53,6 +68,12 @@ const RegisterForm = () => {
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
       />
+      <TextField
+      label="Benutzername"
+      type="text"
+      value={displayName}
+      onChange={(e) => setDisplayName(e.target.value)}
+    />
       <Button variant="contained" color="primary" type="submit">Registrarse</Button>
     </form>
   );
