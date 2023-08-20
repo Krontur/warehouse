@@ -4,12 +4,14 @@ import { db } from '../config/firebase';
 import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 import '../css/ProductForm.css';
 import { getHighestFieldValue } from '../js/utils';
+import { UserAuth } from '../context/AuthContext';
 
 const AddCartItemForm = ({ product, afterSave }) => {
   const [formData, setFormData] = useState({
     jobnumber: '',
     costcenter: '',
     date: '',
+    user: '',
     Position: '',
     quantity: '',
     unit: '',
@@ -24,6 +26,8 @@ const AddCartItemForm = ({ product, afterSave }) => {
   const [highestValuePosition, setHighestValuePosition] = useState(null)
   const navigate = useNavigate();
   const date = new Date();
+
+  const { user } = UserAuth();
 
   useEffect(() => {
     console.log(formData.EANCode);
@@ -73,13 +77,13 @@ const AddCartItemForm = ({ product, afterSave }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const updatedData = { ...formData, Position: highestValuePosition+1, date: date.getDate()+"/"+ (date.getMonth()+1)+"/"+ date.getFullYear() };
+    const updatedData = { ...formData, Position: highestValuePosition+1, date: date.getDate()+"/"+ (date.getMonth()+1)+"/"+ date.getFullYear(), user: user.displayName };
     await addDoc(collection(db, "items"), updatedData);
     if (product) {
       afterSave && afterSave();
-      navigate("/shoppingcart")
-    } else {
       navigate("/products")
+    } else {
+      navigate("/shoppingcart")
     }
   };
 
