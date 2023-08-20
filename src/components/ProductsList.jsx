@@ -16,7 +16,12 @@ const ProductsList = () => {
   const [showModalEdit, setShowModalEdit] = useState(false);
   const [showModalAdd, setShowModalAdd] = useState(false);
   const [searchedProduct, setSearchedProduct] = useState('');
+  const [page, setPage] = useState(0);
 
+  // Actualizar items al cambiar página
+  const changePage = (newPage) => {
+  setPage(newPage);
+  }
   
   const handleSearch = (searchTerm) => {
     try{
@@ -109,7 +114,7 @@ const ProductsList = () => {
           </tr>
         </thead>
         <tbody>
-          {productsList.map(product => (
+          {productsList.slice(page*20 , (page*20)+20).map(product => (
             <tr key={product.id}>
               <td>{product.description}</td>
               <td>{product.EANCode}</td>
@@ -126,8 +131,12 @@ const ProductsList = () => {
           ))}
         </tbody>
       </table>
+      <div className='navButtons'>
+          <button onClick={() => changePage(page - 1)} className={page === 0 ? 'disabledButton' : 'activeButton'} disabled={page === 0}>Zurück</button>
+          <button onClick={() => changePage(page + 1)} className={page >= (productsList.length / 20) - 1 ? 'disabledButton' : 'activeButton'} disabled={page >= (productsList.length / 20) - 1}>Weiter</button>
+      </div>
     </div>
-    
+
     <Modal backdrop="static" show={showModalEdit} onHide={handleCloseModal}>
       <Modal.Header>
         <Modal.Title>Edit Product</Modal.Title>

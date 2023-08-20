@@ -9,6 +9,12 @@ import '../css/PurchaseHistoryComponent.css'
 const PurchaseHistoryComponent = () => {
     const [purchaseHistory, setPurchaseHistory] = useState([]);
     const [searchedEntry, setSearchedEntry] = useState('');
+    const [page, setPage] = useState(0);
+  
+    // Actualizar items al cambiar página
+    const changePage = (newPage) => {
+    setPage(newPage);
+    }
 
     
     const handleSearch = async (searchTerm) => {
@@ -80,7 +86,7 @@ const PurchaseHistoryComponent = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {purchaseHistory.map(entry => (
+                    {purchaseHistory.slice(page*20, (page*20)+20).map(entry => (
                         <tr key={entry.entryNumber} style={{
                                 backgroundColor: entry.received >= entry.quantity ? 'lightgreen' : '',
                                 color: entry.received >= entry.quantity ? 'black' : '',
@@ -128,6 +134,10 @@ const PurchaseHistoryComponent = () => {
                     ))}
                 </tbody>
             </table>
+            <div className='navButtons'>
+                <button onClick={() => changePage(page - 1)} className={page === 0 ? 'disabledButton' : 'activeButton'} disabled={page === 0}>Zurück</button>
+                <button onClick={() => changePage(page + 1)} className={page >= (purchaseHistory.length / 20) - 1 ? 'disabledButton' : 'activeButton'} disabled={page >= (purchaseHistory.length / 20) - 1}>Weiter</button>
+            </div>
         </div>
         </>
     );
