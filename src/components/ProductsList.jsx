@@ -110,6 +110,7 @@ const ProductsList = () => {
             <th>Art.Nr.:</th>
             <th>Kurze Beschreibung</th>
             <th>Produkt ID</th>
+            <th>UVP</th>
             <th className='aligncenter'>Aktionen</th>
           </tr>
         </thead>
@@ -122,6 +123,7 @@ const ProductsList = () => {
               <td>{product.productNumber}</td>
               <td>{product.shortDescription}</td>
               <td>{product.productID}</td>
+              <td>{product.price>0 ? product.price + "€" : ''}</td>
               <td className="action">
                 <button onClick={handleEditClick(product)}>Bearbeiten</button>
                 <button onClick={handleClickDelete(product.id)}>Löschen</button>
