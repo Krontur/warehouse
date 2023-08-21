@@ -34,7 +34,7 @@ const ShoppingCartComponent = () => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
                     })
                 });
-            const columnOrder = ["Position", "date", "order", "orderNumber", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "unit", "id", "comment"];
+            const columnOrder = ["Position", "date", "user", "order", "orderNumber", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "unit", "id", "comment"];
             const reorderedData = data.map(row => {
                 return columnOrder.reduce((obj, key) => {
                     obj[key] = row[key];
@@ -55,14 +55,14 @@ const ShoppingCartComponent = () => {
 
     const handleSendClick = (cartItems, order, orderNumber) => {
         exportToExcel(cartItems, order);
-        alert("Your Order has been sent to the server");
+        alert("Die Bestellung wird im Server gespeichert.");
         saveCartItemsToFirestore(cartItems, orderNumber, order);
-        navigate("/shoppingcart");
+        navigate("/purchasehistory");
     };
 
     const handleClickDelete = (id) => async () => {
         try {
-          if (window.confirm("Want to delete?")) {
+          if (window.confirm("Endgültig löschen?")) {
             await deleteDoc(doc(db, 'items', id));
             getCartItems();
           }
@@ -93,6 +93,7 @@ const ShoppingCartComponent = () => {
                     <tr>
                         <th>Position</th>
                         <th>Datum der Buchung</th>
+                        <th>Benutzer</th>
                         <th>EAN-Code</th>
                         <th>Art.Nr.</th>
                         <th>Hersteller</th>
@@ -110,6 +111,7 @@ const ShoppingCartComponent = () => {
                         <tr key={item.productID}>
                             <td>{item.Position}</td>
                             <td>{item.date}</td>
+                            <td>{item.user}</td>
                             <td>{item.EANCode}</td>
                             <td>{item.productNumber}</td>
                             <td>{item.producer}</td>
