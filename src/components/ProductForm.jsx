@@ -11,9 +11,10 @@ const ProductForm = ({ product, afterSave }) => {
     description: '',
     EANCode: '',
     producer: '',
-    productID: '',
+    productID: 0,
     productNumber: '',
-    shortDescription: ''
+    shortDescription: '',
+    price: 0
   });
   const [highestValueProductID, setHighestValueProductID] = useState(null)
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ const ProductForm = ({ product, afterSave }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Convert productID to a number
-    const updatedData = { ...formData, productID: highestValueProductID+1 };
+    const updatedData = { ...formData };
     // If updating existing product, use its ID; otherwise, add a new product.
     if (product) {
       await updateDoc(doc(db, "products", product.id), updatedData);
@@ -72,7 +73,7 @@ const ProductForm = ({ product, afterSave }) => {
 
       <div className="form-group">
         <label>Produkt ID:</label>
-        <input type="number" name="productID" value={formData.productID || (highestValueProductID+1) } onChange={handleChange} disabled />
+        <input type="number" name="productID" value={afterSave ? formData.productID : (highestValueProductID+1) } onChange={handleChange} disabled />
       </div>
 
       <div className="form-group">
@@ -83,6 +84,11 @@ const ProductForm = ({ product, afterSave }) => {
       <div className="form-group">
         <label>Kurze Beschreibung:</label>
         <input type="text" name="shortDescription" value={formData.shortDescription} onChange={handleChange} />
+      </div>
+
+      <div className="form-group">
+        <label>UVP des Produkts</label>
+        <input type="number" name="price" value={parseFloat(formData.price)} onChange={handleChange} />
       </div>
 
       <div className="form-group">
