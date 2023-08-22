@@ -47,7 +47,7 @@ const ProductForm = ({ product, afterSave }) => {
       await updateDoc(doc(db, "products", product.id), updatedData);
       afterSave && afterSave();
     } else {
-      await addDoc(collection(db, "products"), updatedData);
+      await addDoc(collection(db, "products"), { ...updatedData, productID: highestValueProductID+1 });
       navigate("/products")
     }
   };
