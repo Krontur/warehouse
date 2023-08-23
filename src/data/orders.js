@@ -14,6 +14,7 @@ export const orders =
       "unit": "Stück",
       "comment": "",
       "received": 0,
+      "orderComplete": false,
       "producer": "Mennekes"
     },
     {
@@ -30,6 +31,7 @@ export const orders =
       "unit": "Stück",
       "comment": "",
       "received": 0,
+      "orderComplete": false,
       "producer": "Mennekes"
     },
     {
@@ -46,6 +48,7 @@ export const orders =
       "unit": "Stück",
       "comment": "",
       "received": 0,
+      "orderComplete": false,
       "producer": "Mennekes"
     },
     {
@@ -62,6 +65,7 @@ export const orders =
       "unit": "Stück",
       "comment": "",
       "received": 0,
+      "orderComplete": false,
       "producer": "OBO Bettermann"
     },
     {
@@ -78,6 +82,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 10,
+      "orderComplete": false,
       "producer": "Jung"
     },
     {
@@ -94,6 +99,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 10,
+      "orderComplete": false,
       "producer": "Jung"
     },
     {
@@ -110,6 +116,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Terminal B - Beleuchtung",
       "received": 40,
+      "orderComplete": false,
       "producer": "MASTER LED"
     },
     {  
@@ -126,6 +133,7 @@ export const orders =
       "unit": "Stück", 
       "comment": "Terminal B - Beleuchtung",
       "received": 40,
+      "orderComplete": false,
       "producer": "MASTER LED"
     },
     {
@@ -142,6 +150,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 500,
+      "orderComplete": false,
       "producer": "Klauke"
     },
     {
@@ -158,6 +167,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 1000,
+      "orderComplete": false,
       "producer": "Klauke"
     },
     {
@@ -174,6 +184,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 1000,
+      "orderComplete": false,
       "producer": "Klauke"
     },
     {
@@ -190,6 +201,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 200,
+      "orderComplete": false,
       "producer": "Klauke"
     },
     {
@@ -206,6 +218,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 100,
+      "orderComplete": false,
       "producer": "Klauke"
     },
     {
@@ -222,6 +235,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",  
       "received": 1000,
+      "orderComplete": false,
       "producer": "Klauke"
     },
     {
@@ -238,6 +252,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 1000,
+      "orderComplete": false,
       "producer": "Klauke"
     },
     {
@@ -254,6 +269,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 200, 
+      "orderComplete": false,
       "producer": "Klauke"
     },
     {  
@@ -270,6 +286,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Straßenbeleuchtung",
       "received": 2,
+      "orderComplete": false,
       "producer": "Merten"
     },
     {
@@ -286,6 +303,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 50,
+      "orderComplete": false,
       "producer": "OBO Bettermann"
     },
     {  
@@ -302,6 +320,7 @@ export const orders =
       "unit": "m",
       "comment": "Werkstatt",
       "received": 40,
+      "orderComplete": false,
       "producer": "Hager"
     },
     {
@@ -318,6 +337,7 @@ export const orders =
       "unit": "m",
       "comment": "Werkstatt",
       "received": 0,
+      "orderComplete": false,
       "producer": "Hager"
     },
     {
@@ -334,7 +354,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Batterie für Handlampen E-Stationen",
         "received": 4,
-        "producer": "Yuasa"
+      "orderComplete": false,
+      "producer": "Yuasa"
       },
       {
         "entryNumber": 22,
@@ -350,7 +371,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Sicherheitsbeleuchtung",
         "received": 7,
-        "producer": "Saft"
+      "orderComplete": false,
+      "producer": "Saft"
       },
       {
         "entryNumber": 23,
@@ -366,7 +388,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Sicherheitsbeleuchtung Veterinärgrenzkontr.",
         "received": 4,
-        "producer": "Beghelli"
+      "orderComplete": false,
+      "producer": "Beghelli"
       },
       {
         "entryNumber": 24,
@@ -382,7 +405,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Straßenbeleuchtung landseitig",
         "received": 50,
-        "producer": "OSRAM"
+      "orderComplete": false,
+      "producer": "OSRAM"
       },
       {
         "entryNumber": 25,
@@ -398,7 +422,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 10,
-        "producer": "Jung"
+      "orderComplete": false,
+      "producer": "Jung"
       },
       {
         "entryNumber": 26,
@@ -414,7 +439,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 10,
-        "producer": "Jung"
+      "orderComplete": false,
+      "producer": "Jung"
       },
       {
         "entryNumber": 27,
@@ -430,7 +456,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 10,
-        "producer": "Jung"
+      "orderComplete": false,
+      "producer": "Jung"
       },
       {
         "entryNumber": 28,
@@ -446,7 +473,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 5,
-        "producer": "Busch-Jaeger"
+      "orderComplete": false,
+      "producer": "Busch-Jaeger"
       },
       {
         "entryNumber": 29,
@@ -462,7 +490,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 5,
-        "producer": "Jung"
+      "orderComplete": false,
+      "producer": "Jung"
       },
       {
         "entryNumber": 30,
@@ -478,7 +507,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 10,
-        "producer": "Jung"
+      "orderComplete": false,
+      "producer": "Jung"
       },
       {
         "entryNumber": 31,
@@ -494,7 +524,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 10,
-        "producer": "Busch-Jaeger"
+      "orderComplete": false,
+      "producer": "Busch-Jaeger"
       },
       {
         "entryNumber": 32,
@@ -510,7 +541,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 1,
-        "producer": "Logitech"
+      "orderComplete": false,
+      "producer": "Logitech"
       },
       {
         "entryNumber": 33,
@@ -526,7 +558,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 1,
-        "producer": "Promat"
+      "orderComplete": false,
+      "producer": "Promat"
       },
       {
         "entryNumber": 34,
@@ -542,7 +575,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 5,
-        "producer": "Loctite"
+      "orderComplete": false,
+      "producer": "Loctite"
       },
       {
         "entryNumber": 35,
@@ -558,7 +592,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 1,
-        "producer": "Mennekes"
+      "orderComplete": false,
+      "producer": "Mennekes"
       },
       {
         "entryNumber": 36,
@@ -574,7 +609,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 3,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 37,
@@ -590,7 +626,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 3,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 38,
@@ -606,7 +643,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 10,
-        "producer": "Siemens"
+      "orderComplete": false,
+      "producer": "Siemens"
       },
       {
         "entryNumber": 39,
@@ -622,7 +660,8 @@ export const orders =
         "unit": "Stück", 
         "comment": "",
         "received": 3,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 40,
@@ -638,7 +677,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 1,
-        "producer": "ABB"
+      "orderComplete": false,
+      "producer": "ABB"
       },
       {
         "entryNumber": 41,
@@ -654,7 +694,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 3,
-        "producer": "Hager"
+      "orderComplete": false,
+      "producer": "Hager"
       },
       {
         "entryNumber": 42,
@@ -670,7 +711,8 @@ export const orders =
         "unit": "m",
         "comment": "",
         "received": 100,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 43,
@@ -686,7 +728,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 0,
-        "producer": "Jung"
+      "orderComplete": false,
+      "producer": "Jung"
       },
       {
         "entryNumber": 44,
@@ -702,7 +745,8 @@ export const orders =
         "unit": "m",
         "comment": "",
         "received": 50,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 45,
@@ -718,7 +762,8 @@ export const orders =
         "unit": "m",
         "comment": "",
         "received": 100,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 46,
@@ -734,7 +779,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 5,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 47,
@@ -750,7 +796,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 5,
-        "producer": "Finder"
+      "orderComplete": false,
+      "producer": "Finder"
       },
       {  
         "entryNumber": 48,
@@ -766,7 +813,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 4,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 49,
@@ -782,7 +830,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 5,
-        "producer": "Hager"
+      "orderComplete": false,
+      "producer": "Hager"
       },
       {
         "entryNumber": 50,
@@ -798,7 +847,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 1,
-        "producer": "Fluke"
+      "orderComplete": false,
+      "producer": "Fluke"
       },
       {
         "entryNumber": 51,
@@ -814,7 +864,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 1,
-        "producer": "Fluke"
+      "orderComplete": false,
+      "producer": "Fluke"
       },
       {
         "entryNumber": 52,
@@ -830,7 +881,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 5,
-        "producer": "Siemens"
+      "orderComplete": false,
+      "producer": "Siemens"
       },
       {
         "entryNumber": 53,
@@ -862,7 +914,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 10,
-        "producer": "OSRAM"
+      "orderComplete": false,
+      "producer": "OSRAM"
       },
       {
         "entryNumber": 55,
@@ -878,7 +931,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 3,
-        "producer": "Mennekes"
+      "orderComplete": false,
+      "producer": "Mennekes"
       },
       {
         "entryNumber": 56,
@@ -894,7 +948,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Reparatur Heizlüfter",
         "received": 3,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 57,
@@ -910,7 +965,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 20,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 58,
@@ -926,7 +982,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Reparatur Heizlüfter",
         "received": 0,
-        "producer": "Finder"
+      "orderComplete": false,
+      "producer": "Finder"
       },
       {
         "entryNumber": 59,
@@ -942,7 +999,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Reparatur Beleuchtung",
         "received": 20,
-        "producer": "OSRAM"
+      "orderComplete": false,
+      "producer": "OSRAM"
       },
       {
         "entryNumber": 60,
@@ -958,7 +1016,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 20,
-        "producer": ""
+      "orderComplete": false,
+      "producer": ""
       },
       {
         "entryNumber": 61,
@@ -974,7 +1033,8 @@ export const orders =
         "unit": "Stück",
         "comment": "",
         "received": 0,
-        "producer": "Würth"
+      "orderComplete": false,
+      "producer": "Würth"
       },
       {
         "entryNumber": 62,
@@ -990,7 +1050,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Notstrom Energiestationen",
         "received": 10,
-        "producer": "Würth"
+      "orderComplete": false,
+      "producer": "Würth"
       },
       {
         "entryNumber": 63,
@@ -1006,7 +1067,8 @@ export const orders =
         "unit": "Stück", 
         "comment": "Notstrom Energiestationen",
         "received": 4,
-        "producer": "FEPRRS"
+      "orderComplete": false,
+      "producer": "FEPRRS"
       },
       {  
         "entryNumber": 64,
@@ -1022,7 +1084,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Parkhausbeleuchtung",
         "received": 100,
-        "producer": "MASTER LED"
+      "orderComplete": false,
+      "producer": "MASTER LED"
       },
       {
         "entryNumber": 65,
@@ -1038,7 +1101,8 @@ export const orders =
         "unit": "Stück",
         "comment": "Abschaltung Werbeträger",
         "received": 25,
-        "producer": "Finder"
+      "orderComplete": false,
+      "producer": "Finder"
       },
   {
     "entryNumber": 66, 
@@ -1054,6 +1118,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Abschaltung Werbeträger",
     "received": 15,
+    "orderComplete": false,
     "producer": "Spelsberg"
   },
   {
@@ -1070,6 +1135,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Abschaltung Werbeträger",
     "received": 15,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1086,6 +1152,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "Siemens"
   },
   {
@@ -1102,6 +1169,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 10,
+    "orderComplete": false,
     "producer": "Siemens"
   },
   {
@@ -1118,6 +1186,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 1,
+    "orderComplete": false,
     "producer": "Siemens"
   },
   {
@@ -1134,6 +1203,7 @@ export const orders =
     "unit": "Stück", 
     "comment": "",
     "received": 5,
+    "orderComplete": false,
     "producer": "Fischer"
   },
   {
@@ -1150,6 +1220,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 10,
+    "orderComplete": false,
     "producer": "Tesa"
   },
   {
@@ -1166,6 +1237,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 10,
+    "orderComplete": false,
     "producer": "Tesa"
   },
   {
@@ -1182,6 +1254,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 10,
+    "orderComplete": false,
     "producer": "Tesa"
   },
   {
@@ -1198,6 +1271,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 10,
+    "orderComplete": false,
     "producer": "Tesa"
   },
   {
@@ -1214,6 +1288,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 10,
+    "orderComplete": false,
     "producer": "Jung"
   },
   {
@@ -1230,6 +1305,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 10,
+    "orderComplete": false,
     "producer": "Jung"
   },
   {
@@ -1246,6 +1322,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 10,
+    "orderComplete": false,
     "producer": "Busch-Jaeger"
   },
   {
@@ -1262,6 +1339,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 1000,
+    "orderComplete": false,
     "producer": "Eltropa"
   },
   {
@@ -1278,6 +1356,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 1000,
+    "orderComplete": false,
     "producer": "Eltropa"
   },
   {  
@@ -1294,6 +1373,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung",
     "received": 2,
+    "orderComplete": false,
     "producer": "RZB"
   },
     {
@@ -1310,6 +1390,7 @@ export const orders =
       "unit": "Stück",
       "comment": "",
       "received": 100,
+      "orderComplete": false,
       "producer": "OSRAM"
     },
     {
@@ -1326,6 +1407,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 75,
+      "orderComplete": false,
       "producer": "OSRAM"
     },
     {
@@ -1342,6 +1424,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Reparatur Beleuchtung",
       "received": 20,
+      "orderComplete": false,
       "producer": "Philips"
     },
     {
@@ -1358,6 +1441,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Reparatur Beleuchtung",
       "received": 100,
+      "orderComplete": false,
       "producer": "Osram"
     },
     {
@@ -1374,6 +1458,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Reparatur Beleuchtung",
       "received": 20,
+      "orderComplete": false,
       "producer": "Osram"
     },
     {
@@ -1390,6 +1475,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 20,
+      "orderComplete": false,
       "producer": "OBO"
     },
     {
@@ -1406,6 +1492,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Reparatur Energiezählersystem",
       "received": 2,
+      "orderComplete": false,
       "producer": "Phoenix Contact"
     },
     {
@@ -1438,6 +1525,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Reparatur UV2 Ringeltaube",
       "received": 1,
+      "orderComplete": false,
       "producer": "Hager"
     },
     {
@@ -1454,6 +1542,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 5,
+      "orderComplete": false,
       "producer": "KNIPEX"
     },
     {
@@ -1470,6 +1559,7 @@ export const orders =
       "unit": "Stück",
       "comment": "Werkstatt",
       "received": 10,
+      "orderComplete": false,
       "producer": "Busch-Jaeger"
     },
     {
@@ -1486,6 +1576,7 @@ export const orders =
       "unit": "Stück",
       "comment": "",
       "received": 1,
+      "orderComplete": false,
       "producer": "Finder"
     },
     {
@@ -1502,6 +1593,7 @@ export const orders =
       "unit": "m",
       "comment": "Werkstatt",
       "received": 100,
+      "orderComplete": false,
       "producer": ""
     },
     {
@@ -1518,6 +1610,7 @@ export const orders =
       "unit": "m",
       "comment": "Werkstatt",
       "received": 100,
+      "orderComplete": false,
       "producer": ""
     },
   {  
@@ -1534,6 +1627,7 @@ export const orders =
     "unit": "m",
     "comment": "Werkstatt",
     "received": 100,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1550,6 +1644,7 @@ export const orders =
     "unit": "m",
     "comment": "Werkstatt",
     "received": 100,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1566,6 +1661,7 @@ export const orders =
     "unit": "m",
     "comment": "Werkstatt", 
     "received": 100,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1582,6 +1678,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Lastbank",
     "received": 1,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1598,6 +1695,7 @@ export const orders =
     "unit": "m", 
     "comment": "Werkstatt",
     "received": 200,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1614,6 +1712,7 @@ export const orders =
     "unit": "m",
     "comment": "Werkstatt",
     "received": 100,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1630,6 +1729,7 @@ export const orders =
     "unit": "m",
     "comment": "Werkstatt",
     "received": 100,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1646,6 +1746,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 25,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1662,6 +1763,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 25,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1678,6 +1780,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 50,
+    "orderComplete": false,
     "producer": "Siemens"
   },
   {
@@ -1694,6 +1797,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 50,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1710,6 +1814,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 50,
+    "orderComplete": false,
     "producer": "Siemens"
   },
   {
@@ -1726,6 +1831,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Steuerung Fluggastbrücke 134",
     "received": 2,
+    "orderComplete": false,
     "producer": "Traco Power"
   },
   {
@@ -1742,6 +1848,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Steuerung Fluggastbrücke 134",
     "received": 2,
+    "orderComplete": false,
     "producer": "Traco Power"
   },
   {
@@ -1758,6 +1865,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 10,
+    "orderComplete": false,
     "producer": "ABL Sursum"
   },
   {
@@ -1774,6 +1882,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 5,
+    "orderComplete": false,
     "producer": "Jung"
   },
   {
@@ -1790,6 +1899,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 5,
+    "orderComplete": false,
     "producer": "OBO Bettermann"
   },
   {
@@ -1806,6 +1916,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt", 
     "received": 5,
+    "orderComplete": false,
     "producer": "OBO Bettermann"
   },
   {
@@ -1822,6 +1933,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Bel. BC5",
     "received": 2,
+    "orderComplete": false,
     "producer": "Steinel Professional"  
   },
   {
@@ -1838,6 +1950,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Bel. Grüne Lagune T.B.",
     "received": 2,
+    "orderComplete": false,
     "producer": "LEDVANCE"
   },
   {
@@ -1854,6 +1967,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Netzteil Steuerung Joystick FGB",
     "received": 5,
+    "orderComplete": false,
     "producer": "ON Semiconductor"
   },
   {
@@ -1870,6 +1984,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 1,
+    "orderComplete": false,
     "producer": "RZB"
   },
   {
@@ -1886,6 +2001,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 4,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1902,6 +2018,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Straßenbeleuchtung",
     "received": 1,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1918,6 +2035,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Straßenbeleuchtung",
     "received": 20,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1934,6 +2052,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 1,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -1950,6 +2069,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur FB10 Tech-9688",
     "received": 1,
+    "orderComplete": false,
     "producer": "Mennekes"
   },
   {
@@ -1966,6 +2086,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Versicherungsfall",
     "received": 0,
+    "orderComplete": false,
     "producer": "ABL Sursum"
   },
   {
@@ -1982,6 +2103,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur FGB136",
     "received": 2,
+    "orderComplete": false,
     "producer": "Z+F Zwirner"
   },
   {
@@ -1998,6 +2120,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 120,
+    "orderComplete": false,
     "producer": "Wago"
   },
   {
@@ -2014,6 +2137,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 10,
+    "orderComplete": false,
     "producer": "MENNEKES"
   },
   {
@@ -2030,6 +2154,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 10,
+    "orderComplete": false,
     "producer": "MENNEKES"
   },
   {
@@ -2046,6 +2171,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 5,
+    "orderComplete": false,
     "producer": "MENNEKES"
   },
   {
@@ -2062,6 +2188,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 20,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2078,6 +2205,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 20,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2094,6 +2222,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 10,
+    "orderComplete": false,
     "producer": "Lapp Group"
   },
   {
@@ -2110,6 +2239,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 10,
+    "orderComplete": false,
     "producer": "Lapp Group"
   },
   {  
@@ -2126,6 +2256,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Bel.Parkhaus",
     "received": 100,
+    "orderComplete": false,
     "producer": "Philips"
   },
   {
@@ -2142,6 +2273,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Bel.FGB",
     "received": 100,
+    "orderComplete": false,
     "producer": "Philips"
   },
   {
@@ -2158,6 +2290,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Bel.Term.B",
     "received": 80,
+    "orderComplete": false,
     "producer": "MASTER LED"
   },
   {
@@ -2174,6 +2307,7 @@ export const orders =
     "unit": "Stück", 
     "comment": "Sicherheitsbeleuchtung",
     "received": 10,
+    "orderComplete": false,
     "producer": "RZB"
   },
   {
@@ -2190,6 +2324,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "MENNEKES"
   },
   {
@@ -2206,6 +2341,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 10,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2222,6 +2358,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 10,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2238,6 +2375,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 10,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2254,6 +2392,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 1,
+    "orderComplete": false,
     "producer": "Eaton"
   },
   {
@@ -2270,6 +2409,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 20,
+    "orderComplete": false,
     "producer": "Eaton"
   },
   {
@@ -2286,6 +2426,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 20,
+    "orderComplete": false,
     "producer": "Eaton"
   },
   {
@@ -2302,6 +2443,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 20,
+    "orderComplete": false,
     "producer": "Eaton"
   },
   {
@@ -2318,6 +2460,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 20,
+    "orderComplete": false,
     "producer": "Eaton"
   },
   {
@@ -2334,6 +2477,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Bel.",
     "received": 0,
+    "orderComplete": false,
     "producer": "OSRAM"
   },
   {
@@ -2350,6 +2494,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 2,
+    "orderComplete": false,
     "producer": "PB Swiss Tools"
   },
   {
@@ -2366,6 +2511,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2382,6 +2528,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2398,6 +2545,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Rettungszeichenleuchten Notlicht Hangar 3",
     "received": 4,
+    "orderComplete": false,
     "producer": "RZB"
   },
   {
@@ -2414,6 +2562,7 @@ export const orders =
     "unit": "Stück", 
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "MASTER LED"
   },
   {
@@ -2446,6 +2595,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt (Prüfung von Leitern)",
     "received": 70,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2462,6 +2612,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Notstrom Energiestationen",
     "received": 4,
+    "orderComplete": false,
     "producer": "Stäubli"
   },
   {
@@ -2478,6 +2629,7 @@ export const orders =
     "unit": "m",
     "comment": "Steckdoseninstallation",
     "received": 100,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2494,6 +2646,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Mieter ALS",
     "received": 1,
+    "orderComplete": false,
     "producer": "OBO Bettermann"
   },
   {
@@ -2510,6 +2663,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Mieter ALS",
     "received": 1,
+    "orderComplete": false,
     "producer": "Hensel"
   },
   {
@@ -2526,6 +2680,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Mieter ALS",
     "received": 3,
+    "orderComplete": false,
     "producer": "Mersen"
   },
   {
@@ -2542,6 +2697,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Mieter ALS",
     "received": 3,
+    "orderComplete": false,
     "producer": "OBO Bettermann"
   },
   {
@@ -2558,6 +2714,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Mieter ALS",
     "received": 1,
+    "orderComplete": false,
     "producer": "Lapp Group"
   },
   {
@@ -2574,6 +2731,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Mieter ALS",
     "received": 1,
+    "orderComplete": false,
     "producer": "Lapp Group"
   },
   {
@@ -2590,6 +2748,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Mieter ALS",
     "received": 2,
+    "orderComplete": false,
     "producer": "OBO Bettermann"
   },
   {
@@ -2606,6 +2765,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Mieter ALS",
     "received": 2,
+    "orderComplete": false,
     "producer": "OBO Bettermann"
   },
   {
@@ -2622,6 +2782,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Energiestationen",
     "received": 0,
+    "orderComplete": false,
     "producer": "Yuasa"
   },
   {
@@ -2638,6 +2799,7 @@ export const orders =
     "unit": "Stück",  
     "comment": "Energiestationen",
     "received": 0,
+    "orderComplete": false,
     "producer": "RZB"
   },
   {
@@ -2654,6 +2816,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "Osram"
   },
   {
@@ -2670,6 +2833,7 @@ export const orders =
     "unit": "Stück",  
     "comment": "Reparatur defekter Taster",
     "received": 0,
+    "orderComplete": false,
     "producer": "Jung"
   },
   {
@@ -2686,6 +2850,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 12,
+    "orderComplete": false,
     "producer": "Hager"
   },
   {
@@ -2702,6 +2867,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 20,
+    "orderComplete": false,
     "producer": "OBO Bettermann"
   },
   {
@@ -2718,6 +2884,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 20,
+    "orderComplete": false,
     "producer": "OBO Bettermann"
   },
   {
@@ -2734,6 +2901,7 @@ export const orders =
     "unit": "Stangen",
     "comment": "Werkstatt (1 Bund = 74m = 37 Stangen)",
     "received": 38,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2750,6 +2918,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Jung"
   },
   {
@@ -2766,6 +2935,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt ",
     "received": 50,
+    "orderComplete": false,
     "producer": "Würth/Zebra"
   },
   {
@@ -2782,6 +2952,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 500,
+    "orderComplete": false,
     "producer": "Tox Manufacturing"
   },
   {
@@ -2798,6 +2969,7 @@ export const orders =
     "unit": "Stück",
     "comment": "1 VPE = 100St.",
     "received": 2,
+    "orderComplete": false,
     "producer": "Fischer"
   },
   {
@@ -2814,6 +2986,7 @@ export const orders =
     "unit": "Stück", 
     "comment": "Repartur Bel. Konferenzräume",
     "received": 0,
+    "orderComplete": false,
     "producer": "Tridonic"
   },
   {
@@ -2830,6 +3003,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Bel. Term. B",
     "received": 0,
+    "orderComplete": false,
     "producer": "OSRAM"
   },
   {
@@ -2846,6 +3020,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Netzersatzanlagen",
     "received": 0,
+    "orderComplete": false,
     "producer": "Stäubli"
   },
   {
@@ -2862,6 +3037,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH",
     "received": 6,
+    "orderComplete": false,
     "producer": "OBO Bettermann"
   },
   {
@@ -2878,6 +3054,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH",
     "received": 0,
+    "orderComplete": false,
     "producer": "Jung"
   },
   {
@@ -2894,6 +3071,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH",
     "received": 0,
+    "orderComplete": false,
     "producer": "Jung"
   },
   {
@@ -2910,6 +3088,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH",
     "received": 4,
+    "orderComplete": false,
     "producer": "Hager"
   },
   {
@@ -2926,6 +3105,7 @@ export const orders =
     "unit": "Stück", 
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Siemens"
   },
   {
@@ -2942,6 +3122,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Straßenbeleuchtung landseitig",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2958,6 +3139,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Straßenbeleuchtung landseitig",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -2974,6 +3156,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Weiterberechnung Kd. 120 601 05 - KLix Airprt Service GmbH",
     "received": 0,
+    "orderComplete": false,
     "producer": "Heidemann"
   },
   {
@@ -2990,6 +3173,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 50,
+    "orderComplete": false,
     "producer": "Siemens"
   },
   {
@@ -3006,6 +3190,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Beleuchtung",
     "received": 0,
+    "orderComplete": false,
     "producer": "Eltako"
   },
   { 
@@ -3022,6 +3207,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Notbeleuchtung IL18",
     "received": 0,
+    "orderComplete": false,
     "producer": "CEAG"
   },
   {
@@ -3038,6 +3224,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Notbeleuchtung IL18",
     "received": 0,
+    "orderComplete": false,
     "producer": "CEAG"
   },
   {
@@ -3054,6 +3241,7 @@ export const orders =
     "unit": "m",
     "comment": "Werkstatt",
     "received": 100,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3070,6 +3258,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 1,
+    "orderComplete": false,
     "producer": "BGS"
   },
   {
@@ -3086,6 +3275,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 2,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3102,6 +3292,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 2,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3118,6 +3309,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron4",
     "received": 10,
+    "orderComplete": false,
     "producer": "Werma"
   },
   {
@@ -3134,6 +3326,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 20,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3150,6 +3343,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4",
     "received": 24,
+    "orderComplete": false,
     "producer": "Aviaticon"
   },
   {
@@ -3166,6 +3360,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 2,
+    "orderComplete": false,
     "producer": "PB Swiss Tools"
   },
   {
@@ -3182,6 +3377,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4 (zu finden bei Schraubenbude.de 0934100F08075)",
     "received": 100,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3198,6 +3394,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4 (zu finden bei Schraubenbude.de 0934200M000061)",
     "received": 100,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3214,6 +3411,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Apron 4 (zu finden bei Schraubenbude.de 0982200M000063)",
     "received": 200,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3230,6 +3428,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Austausch Rettungszeichenleuchten",
     "received": 0,
+    "orderComplete": false,
     "producer": "RZB"
   },
   {
@@ -3246,6 +3445,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Austausch defekte Rettungzeichenleuchte",
     "received": 0,
+    "orderComplete": false,
     "producer": "RZB"
   },
   {
@@ -3262,6 +3462,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Austausch der Akkus von den vorhandenen Handscheinwerfern in den Elektroräume",
     "received": 0,
+    "orderComplete": false,
     "producer": "Acculux"
   },
   {
@@ -3278,6 +3479,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Anfertigung Ladekabel Feuerwehr",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {  
@@ -3294,6 +3496,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Anfertigung Ladekabel Feuerwehr",
     "received": 0,
+    "orderComplete": false,
     "producer": "MENNEKES"
   },
   {
@@ -3310,6 +3513,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Anfertigung Ladekabel Feuerwehr",
     "received": 0,
+    "orderComplete": false,
     "producer": "MENNEKES"
   },
   {
@@ -3326,6 +3530,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Weidmüller" 
   },
   {
@@ -3342,6 +3547,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Weidmüller"
   },
   {
@@ -3358,6 +3564,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Weidmüller"
   },
   {
@@ -3374,6 +3581,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Stecker",
     "received": 0,
+    "orderComplete": false,
     "producer": "MENNEKES"
   },
   {
@@ -3390,6 +3598,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Fischer"
   },
   {
@@ -3406,6 +3615,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Kontrollpunkt 2",
     "received": 0,
+    "orderComplete": false,
     "producer": "CEAG"
   },
   {
@@ -3422,6 +3632,7 @@ export const orders =
     "unit": "Stück",
     "comment": "VWG Notbel.",
     "received": 0,
+    "orderComplete": false,
     "producer": "CEAG"
   },
   {
@@ -3438,6 +3649,7 @@ export const orders =
     "unit": "Stück",
     "comment": "KFH Notbel.",
     "received": 0,
+    "orderComplete": false,
     "producer": "Beghelli"
   },
   {
@@ -3454,6 +3666,7 @@ export const orders =
     "unit": "Stück",
     "comment": "VGK Notbel.",
     "received": 0,
+    "orderComplete": false,
     "producer": "Beghelli"
   },
   {
@@ -3486,6 +3699,7 @@ export const orders =
     "unit": "Stück",
     "comment": "VGK Notbel.",
     "received": 0,
+    "orderComplete": false,
     "producer": "AXCOM"
   },
   {
@@ -3502,6 +3716,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Term.B Notbel.",
     "received": 0,
+    "orderComplete": false,
     "producer": "OSRAM"
   },
   {
@@ -3518,6 +3733,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Bel. Toilette",
     "received": 0,
+    "orderComplete": false,
     "producer": "Esylux"
   },
   {
@@ -3534,6 +3750,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "Philips"
   },
   {
@@ -3550,6 +3767,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "Philips"
   },
   {
@@ -3566,6 +3784,7 @@ export const orders =
     "unit": "Stück",  
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "Philips"
   },
   {
@@ -3582,6 +3801,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3598,6 +3818,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Beleuchtung", 
     "received": 0,
+    "orderComplete": false,
     "producer": "MENNEKES"
   },
   {
@@ -3629,6 +3850,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Mennekes"
   },
   {
@@ -3645,6 +3867,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Eltropa"
   },
   {
@@ -3661,6 +3884,7 @@ export const orders =
     "unit": "Stück",  
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Eltropa"
   },
   {
@@ -3677,6 +3901,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Eltropa"
   },
   {
@@ -3709,6 +3934,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Sicherheitsbeleuchtung",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3725,6 +3951,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Mennekes"
   },
   {
@@ -3741,6 +3968,7 @@ export const orders =
     "unit": "Satz",
     "comment": "Werkzeugausstattung (Herr Kulf)",
     "received": 0,
+    "orderComplete": false,
     "producer": "Wera"
   },
   {
@@ -3757,6 +3985,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Jung"
   },
   {
@@ -3773,6 +4002,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Austausch Leuchte Tui Travel Star",
     "received": 0,
+    "orderComplete": false,
     "producer": "RZB"
   },
   {
@@ -3789,6 +4019,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "Hensel"
   },
   {
@@ -3821,6 +4052,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "Stäubli"
   },
   {
@@ -3837,6 +4069,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3869,6 +4102,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3885,6 +4119,7 @@ export const orders =
     "unit": "m",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3901,6 +4136,7 @@ export const orders =
     "unit": "m",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3917,6 +4153,7 @@ export const orders =
     "unit": "m",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3949,6 +4186,7 @@ export const orders =
     "unit": "m",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -3965,6 +4203,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Promat"
   },
   {
@@ -3981,6 +4220,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Promat"
   },
   {
@@ -3997,6 +4237,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Reparatur Sicherheitsbeleuchtung",
     "received": 0,
+    "orderComplete": false,
     "producer": "Eaton"
   },
   {
@@ -4013,6 +4254,7 @@ export const orders =
     "unit": "Pack",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -4029,6 +4271,7 @@ export const orders =
     "unit": "Pack",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -4045,6 +4288,7 @@ export const orders =
     "unit": "Pack",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": ""
   },
   {
@@ -4061,6 +4305,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "WD-40"
   },
   {
@@ -4093,6 +4338,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Hager"
   },
   {
@@ -4109,6 +4355,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "Spelsberg"
   },
   {
@@ -4125,6 +4372,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4141,6 +4389,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4157,6 +4406,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4173,6 +4423,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4189,6 +4440,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4205,6 +4457,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4221,6 +4474,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4237,6 +4491,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4253,6 +4508,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4269,6 +4525,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4285,6 +4542,7 @@ export const orders =
     "unit": "Stück", 
     "comment": "Fluggastbrücke 134, Stecker wechseln",
     "received": 0,
+    "orderComplete": false,
     "producer": "HARTING"
   },
   {
@@ -4301,6 +4559,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "DYMO"
   },
   {
@@ -4317,6 +4576,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "DYMO"
   },
   {
@@ -4333,6 +4593,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "DYMO"
   },
   {
@@ -4349,6 +4610,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "DYMO"
   },
   {
@@ -4365,6 +4627,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Busch-Jaeger"
   },
   {
@@ -4381,6 +4644,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Hager"
   },
   {
@@ -4397,6 +4661,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Wago"
   },
   {
@@ -4413,6 +4678,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Wago"
   },
   {
@@ -4429,6 +4695,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Mennekes"
   },
   {
@@ -4445,6 +4712,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "Mennekes"
   },
   {
@@ -4461,6 +4729,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "Philips"
   },
   {
@@ -4477,6 +4746,7 @@ export const orders =
     "unit": "Stück",
     "comment": "",
     "received": 0,
+    "orderComplete": false,
     "producer": "OSRAM"
   },
   {
@@ -4493,6 +4763,7 @@ export const orders =
     "unit": "Stück",
     "comment": "Werkstatt",
     "received": 0,
+    "orderComplete": false,
     "producer": "ABL Sursum"
   }
 ]

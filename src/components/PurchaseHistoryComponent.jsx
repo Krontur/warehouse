@@ -30,7 +30,7 @@ const PurchaseHistoryComponent = () => {
         try {
             let histCollection = collection(db, 'orders');
             const data = [];
-            await getDocs(query(histCollection, orderBy('entryNumber', 'desc')))
+            await getDocs(query(histCollection, orderBy('orderComplete'), orderBy('entryNumber', 'desc')))
                 .then(snap => {
                     snap.forEach(doc => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
@@ -87,9 +87,9 @@ const PurchaseHistoryComponent = () => {
                 </thead>
                 <tbody>
                     {purchaseHistory.slice(page*20, (page*20)+20).map(entry => (
-                        <tr key={entry.entryNumber} style={{
-                                backgroundColor: entry.received >= entry.quantity ? 'lightgreen' : '',
-                                color: entry.received >= entry.quantity ? 'black' : '',
+                        <tr key={entry.id} style={{
+                                backgroundColor: entry.orderComplete ? 'lightgreen' : '',
+                                color: entry.orderComplete ? 'black' : '',
                             }}>
                             <td>{entry.entryNumber}</td>
                             <td>{entry.date}</td>
@@ -114,9 +114,13 @@ const PurchaseHistoryComponent = () => {
                                         const newReceived = parseInt(entry.received) + parseInt(addProduct);
 
                                         const orderRef = doc(db, "orders", entry.id);
-
+                                        let orderComplete;
+                                        if(doc(orderRef).quantity >= newReceived){
+                                            orderComplete = true;
+                                        }                                        
                                         updateDoc(orderRef, {
-                                        received: newReceived
+                                        received: newReceived,
+                                        orderComplete: orderComplete
                                         })
                                         .then(() => {
                                         getPurchaseHistory(); 
