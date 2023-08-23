@@ -23,7 +23,7 @@ const logoutHandler = () => {
     return (
         <Navbar bg="primary" variant="dark" expand="lg" className="custom-navbar">
             <Container>
-                <Navbar.Brand href="/">Lagerverwaltung</Navbar.Brand>
+                <Navbar.Brand href="/">Bestellungen</Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                         <Nav.Link href="/">Home</Nav.Link>
