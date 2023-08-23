@@ -14,10 +14,12 @@ import RequiredAuth from './context/RequiredAuth';
 
 //import { addProductsToFirestore } from './test/addProductsToFirestore';
 //import { addOrdersToFirestore } from './test/addOrdersToFirestore';
+//import addOrderCompleteField  from './test/addOrderCompleteField.js';
 
 import './css/App.css';
 
 function App() {
+
   return (
     <AuthContextProvider>
     <Router>
