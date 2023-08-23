@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../config/firebase';
-import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
+import { collection, addDoc, query, where, getDocs, setDoc, doc } from 'firebase/firestore';
 import '../css/ProductForm.css';
 import { getHighestFieldValue } from '../js/utils';
 import { UserAuth } from '../context/AuthContext';
 
-const AddCartItemForm = ({ product, afterSave }) => {
+const AddCartItemForm = ({ product, item, afterSave }) => {
   const [formData, setFormData] = useState({
     jobnumber: '',
     costcenter: '',
     date: '',
     user: '',
-    Position: '',
-    quantity: '',
+    Position: 0,
+    quantity: null,
     unit: '',
     description: '',
     EANCode: '',
     producer: '',
-    productID: '',
+    productID: 0,
     productNumber: '',
     shortDescription: '',
     comment: ''
@@ -30,9 +30,10 @@ const AddCartItemForm = ({ product, afterSave }) => {
   const { user } = UserAuth();
 
   useEffect(() => {
-    console.log(formData.EANCode);
     if (product) {
       setFormData(product);
+    } else if (item){
+      setFormData(item);
     }
 
     async function fetchHighestValue(){
@@ -40,7 +41,7 @@ const AddCartItemForm = ({ product, afterSave }) => {
       setHighestValuePosition(value);
     }
     fetchHighestValue();
-  }, [product, formData]);
+  }, [product, item, formData.EANCode]);
 
   const getDocEANCode = async (EAN) => {
     const products = collection(db, "products");
@@ -50,7 +51,6 @@ const AddCartItemForm = ({ product, afterSave }) => {
   }
 
   const handleChange = (e) => {
-    console.log(e);
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -77,14 +77,22 @@ const AddCartItemForm = ({ product, afterSave }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const updatedData = { ...formData, Position: highestValuePosition+1, date: date.getDate()+"/"+ (date.getMonth()+1)+"/"+ date.getFullYear(), user: user.displayName };
-    await addDoc(collection(db, "items"), updatedData);
-    if (product) {
+    const updatedData = { 
+      ...formData,
+      Position: item ? item.Position : highestValuePosition+1,
+      date: date.getDate()+"/"+ (date.getMonth()+1)+"/"+ date.getFullYear(),
+      user: user.displayName,
+      jobnumber: formData.jobnumber || null,
+      comment: formData.comment || null
+     };
+    if (item) {
+      await setDoc(doc(db, "items", item.id), { ...updatedData });
       afterSave && afterSave();
-      navigate("/products")
-    } else {
-      navigate("/shoppingcart")
+    } 
+    if(product || !item){
+      await addDoc(collection(db, "items"), updatedData);
     }
+    navigate("/shoppingcart");
   };
 
   return (
@@ -93,17 +101,17 @@ const AddCartItemForm = ({ product, afterSave }) => {
     <form onSubmit={handleSubmit} className="product-form">
       <div className="form-group">
         <label>Position:</label>
-        <input type="number" name="Position" disabled value={(highestValuePosition+1)} onChange={handleChange} />
+        <input type="number" name="Position" disabled value={ item ? item.Position : (highestValuePosition+1)} onChange={handleChange} />
       </div>
 
       <div className="form-group">
         <label>Auftragsnummer:</label>
-        <input type="text" name="jobnumber" value={formData.jobnumber} onChange={handleChange} />
+        <input type="text" name="jobnumber" value={formData.jobnumber && null} onChange={handleChange} />
       </div>
 
       <div className="form-group">
         <label>Kostenstelle:</label>
-        <input type="text" name="costcenter" value={formData.costcenter} onChange={handleChange} />
+        <input type="text" name="costcenter" value={formData.costcenter} onChange={handleChange} required/>
       </div>
 
       <div className="form-group">
@@ -113,7 +121,7 @@ const AddCartItemForm = ({ product, afterSave }) => {
 
       <div className="form-group">
         <label>Beschreibung:</label>
-        <input type="text" name="description" value={formData.description} onChange={handleChange} disabled/>
+        <input type="text" name="description" value={formData.description} onChange={handleChange} required disabled/>
       </div>
       
       <div className="form-group">
@@ -143,17 +151,17 @@ const AddCartItemForm = ({ product, afterSave }) => {
 
       <div className="form-group">
         <label>Menge:</label>
-        <input type="number" name="quantity" value={formData.quantity} onChange={handleChange} />
+        <input type="number" name="quantity" value={formData.quantity} onChange={handleChange} required/>
       </div>
 
       <div className="form-group">
         <label>Einheit:</label>
-        <input type="text" name="unit" value={formData.unit} onChange={handleChange} />
+        <input type="text" name="unit" value={formData.unit} onChange={handleChange} required/>
       </div>
 
       <div className="form-group">
         <label>Kommentar:</label>
-        <textarea rows={6} cols={26} name="comment" value={formData.comment} onChange={handleChange} />
+        <textarea rows={6} cols={26} name="comment" value={formData.comment && null} onChange={handleChange} />
       </div>
 
       <div className="form-group">

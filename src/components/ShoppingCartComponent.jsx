@@ -34,7 +34,7 @@ const ShoppingCartComponent = () => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
                     })
                 });
-            const columnOrder = ["Position", "date", "user", "order", "orderNumber", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "unit", "id", "comment"];
+            const columnOrder = ["Position", "date", "user", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "unit", "id", "comment"];
             const reorderedData = data.map(row => {
                 return columnOrder.reduce((obj, key) => {
                     obj[key] = row[key];
@@ -76,19 +76,21 @@ const ShoppingCartComponent = () => {
       }
     
     
-    const handleCloseModal = () => {
+    const handleCloseModal = async () => {
         setSelectedItem(null);
-        getCartItems();
+        getCartItems()
         setShowModalEdit(false); // Close the modal
     }
 
     return (
         <>
         <div className="shopping-cart">
-            <h1>Bestellung {order}</h1>
             { isLoggedIn && role !=='admin' ? <h2>Warenkorb</h2> : <h2>Warenkorb <button onClick={()=> {handleSendClick(cartItems, order, orderNumber)}}>SENDEN</button></h2>}
             
             <table className="cart-table" id='cartItems'>
+                <caption>
+                    <h1>Bestellung {order}</h1>
+                </caption>
                 <thead>
                     <tr>
                         <th>Position</th>
@@ -108,7 +110,7 @@ const ShoppingCartComponent = () => {
                 </thead>
                 <tbody>
                     {cartItems.map(item => (
-                        <tr key={item.productID}>
+                        <tr key={item.id}>
                             <td>{item.Position}</td>
                             <td>{item.date}</td>
                             <td>{item.user}</td>
@@ -137,7 +139,7 @@ const ShoppingCartComponent = () => {
                 <Modal.Title>Artikel bearbeiten</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <AddCartItemForm product={selectedItem} afterSave={handleCloseModal} />
+                <AddCartItemForm item={selectedItem} afterSave={handleCloseModal} />
             </Modal.Body>
             <Modal.Footer>
                 <button onClick={handleCloseModal}>Schliessen</button>

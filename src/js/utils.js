@@ -27,13 +27,12 @@ export async function getHighestFieldValue(collectionName, fieldName, fieldName2
 
 export function exportToExcel(data, filename = 'data') {
 
-  const columnOrder = ["Position", "date", "productID", "productNumber", "producer", "EANCode", "description",  "costcenter", "jobnumber", "quantity", "unit"];
+  const columnOrder = ["Position", "date", "productNumber", "producer", "EANCode", "description",  "costcenter", "jobnumber", "quantity", "unit"];
 
   // Cambiar las cabeceras
   const newHeaders = {
     "Position": "Position",
     "date": "Datum",
-    "productID": "Produkt ID",
     "productNumber": "Art.Nr.",
     "EANCode": "EAN-Code",
     "producer": "Hersteller",
