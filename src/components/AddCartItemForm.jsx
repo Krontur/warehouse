@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../config/firebase';
-import { collection, addDoc, query, where, getDocs, setDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, query, where, getDocs, updateDoc, doc } from 'firebase/firestore';
 import '../css/ProductForm.css';
 import { getHighestFieldValue } from '../js/utils';
 import { UserAuth } from '../context/AuthContext';
@@ -86,11 +86,11 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
       comment: formData.comment || null
      };
     if (item) {
-      await setDoc(doc(db, "items", item.id), { ...updatedData });
+      await updateDoc(doc(db, "items", item.id), { ...updatedData });
       afterSave && afterSave();
     } 
     if(product || !item){
-      await addDoc(collection(db, "items"), updatedData);
+      await addDoc(collection(db, "items"), { ...updatedData, Position: highestValuePosition+1 });
     }
     navigate("/shoppingcart");
   };
