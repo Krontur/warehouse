@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../config/firebase';
-import { getDocs, collection, orderBy, query, updateDoc, doc } from 'firebase/firestore';
+import { getDocs, collection, orderBy, query, updateDoc, doc, getDoc } from 'firebase/firestore';
 
 import SearchBar from './SearchBar';
 
@@ -59,7 +59,7 @@ const PurchaseHistoryComponent = () => {
     
     useEffect(() => {
         getPurchaseHistory();
-    }, []);
+    }, [searchedEntry]);
 
     return (
         <>
@@ -113,14 +113,19 @@ const PurchaseHistoryComponent = () => {
                                     if(addProduct) {
                                         const newReceived = parseInt(entry.received) + parseInt(addProduct);
 
-                                        const orderRef = doc(db, "orders", entry.id);
-                                        let orderComplete;
-                                        if(doc(orderRef).quantity >= newReceived){
-                                            orderComplete = true;
+                                        const entryRef = doc(db, "orders", entry.id);
+                                        const updatedOrder = {
+                                            ...entry,
+                                            orderComplete: false,
+                                        }
+                                        console.log(entry.quantity)
+                                        if(entry.quantity >= newReceived){
+                                            updatedOrder.orderComplete = true;
+                                            console.log(updatedOrder);
                                         }                                        
-                                        updateDoc(orderRef, {
-                                        received: newReceived,
-                                        orderComplete: orderComplete
+                                        updateDoc(entryRef, {
+                                            ...updatedOrder,
+                                            received: newReceived,
                                         })
                                         .then(() => {
                                         getPurchaseHistory(); 
