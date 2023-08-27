@@ -38,6 +38,7 @@ const ProductsList = () => {
   const getProductsList =  async () => {
     
     try {
+      setLoading(true);
       let productCollection = collection(db, 'products');
       const q = query(productCollection, orderBy("productID", "desc"));
       const data = [];
