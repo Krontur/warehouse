@@ -7,6 +7,7 @@ import { getHighestFieldValue, exportToExcel, saveCartItemsToFirestore } from '.
 
 import '../css/ShoppingCartComponent.css';
 import AddCartItemForm from './AddCartItemForm';
+import { Circles } from 'react-loader-spinner';
 
 import { UserAuth } from '../context/AuthContext';
 
@@ -17,6 +18,7 @@ const ShoppingCartComponent = () => {
     const [showModalEdit, setShowModalEdit] = useState(false);
     const navigate = useNavigate();
     const {role, isLoggedIn} = UserAuth();
+    const [loading, setLoading] = useState(true);
 
     //setLastOrder(getHighestFieldValue('orders', 'orderNumber'))
 
@@ -26,6 +28,7 @@ const ShoppingCartComponent = () => {
 
     const getCartItems = async () => {
         try {
+            setLoading(true);
             let cartCollection = collection(db, 'items');
             const data = [];
             await getDocs(query(cartCollection, orderBy('Position')))
@@ -42,8 +45,7 @@ const ShoppingCartComponent = () => {
                 }, {});
             });
             setCartItems(reorderedData);
-        
-            setLastOrder( await getHighestFieldValue('orders', 'orderNumber', 'entryNumber'));
+            setLoading(false);        
         } catch (error) {
             console.error(error);
         }
@@ -51,7 +53,11 @@ const ShoppingCartComponent = () => {
     
     useEffect(() => {
             getCartItems();
-    }, [lastOrder]);
+            getHighestFieldValue('orders', 'orderNumber', 'entryNumber')
+                .then(data => {
+                    setLastOrder(data);
+                });
+    }, []);
 
     const handleSendClick = (cartItems, order, orderNumber) => {
         exportToExcel(cartItems, order);
@@ -81,7 +87,24 @@ const ShoppingCartComponent = () => {
         getCartItems()
         setShowModalEdit(false); // Close the modal
     }
-
+    if(loading){
+        return (
+        <div className='loader'>
+          <h1>Loading...</h1>
+          <div className='spinner'>
+          <Circles
+            height="80"
+            width="80"
+            color="#1DA1F2"
+            ariaLabel="circles-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+            speed={1}
+          />
+          </div>
+        </div> );
+      } else {
     return (
         <>
         <div className="shopping-cart">
@@ -147,6 +170,7 @@ const ShoppingCartComponent = () => {
         </Modal>
         </>
     );
+    }
 }
 
 export default ShoppingCartComponent;
