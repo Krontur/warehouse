@@ -3,6 +3,7 @@ import { db } from '../config/firebase';
 import { getDocs, collection, orderBy, query, updateDoc, doc, getDoc } from 'firebase/firestore';
 
 import SearchBar from './SearchBar';
+import { Circles } from 'react-loader-spinner';
 
 import '../css/PurchaseHistoryComponent.css'
 
@@ -10,6 +11,7 @@ const PurchaseHistoryComponent = () => {
     const [purchaseHistory, setPurchaseHistory] = useState([]);
     const [searchedEntry, setSearchedEntry] = useState('');
     const [page, setPage] = useState(0);
+    const [loading, setLoading] = useState(true);
   
     // Actualizar items al cambiar página
     const changePage = (newPage) => {
@@ -28,6 +30,7 @@ const PurchaseHistoryComponent = () => {
 
     const getPurchaseHistory = async () => {
         try {
+            setLoading(true);
             let histCollection = collection(db, 'orders');
             const data = [];
             await getDocs(query(histCollection, orderBy('orderComplete'), orderBy('entryNumber', 'desc')))
@@ -49,8 +52,10 @@ const PurchaseHistoryComponent = () => {
                 return false;  // Si el valor no se encuentra en ningún campo, excluye este documento
             });
                 setPurchaseHistory(filteredProducts);
+                setLoading(false);
             } else {
                 setPurchaseHistory(data);
+                setLoading(false);
             }
         } catch (error) {
             console.error(error);
@@ -61,6 +66,24 @@ const PurchaseHistoryComponent = () => {
         getPurchaseHistory();
     }, [searchedEntry]);
 
+    if(loading){
+        return (
+        <div className='loader'>
+          <h1>Loading...</h1>
+          <div className='spinner'>
+          <Circles
+            height="80"
+            width="80"
+            color="#1DA1F2"
+            ariaLabel="circles-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+            speed={1}
+          />
+          </div>
+        </div> );
+      } else {
     return (
         <>
         <SearchBar onSearch={handleSearch} placeholder={"Buchung suchen..."}/>
@@ -150,7 +173,7 @@ const PurchaseHistoryComponent = () => {
         </div>
         </>
     );
-    
+    } 
 }
 
 export default PurchaseHistoryComponent;
