@@ -8,6 +8,9 @@ import { Modal } from 'react-bootstrap';
 import ProductForm from './ProductForm';
 import SearchBar from './SearchBar';
 import AddCartItemForm from './AddCartItemForm';
+import { currencyFormatter } from '../js/utils';
+import { Circles } from 'react-loader-spinner';
+
 import '../css/ProductsList.css';
 
 const ProductsList = () => {
@@ -17,6 +20,7 @@ const ProductsList = () => {
   const [showModalAdd, setShowModalAdd] = useState(false);
   const [searchedProduct, setSearchedProduct] = useState('');
   const [page, setPage] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   // Actualizar items al cambiar página
   const changePage = (newPage) => {
@@ -56,8 +60,10 @@ const ProductsList = () => {
           return false;  // Si el valor no se encuentra en ningún campo, excluye este documento
       });
          setProductsList(filteredProducts);
+         setLoading(false);
       } else {
-      setProductsList(data);
+        setProductsList(data);
+        setLoading(false)
       }
     } catch (error) {
       console.error(error);
@@ -96,7 +102,25 @@ const ProductsList = () => {
     setShowModalAdd(false);   // Close the modal
   }
 
-  return (
+    if(loading){
+      return (
+      <div className='loader'>
+        <h1>Loading...</h1>
+        <div className='spinner'>
+        <Circles
+          height="80"
+          width="80"
+          color="#1DA1F2"
+          ariaLabel="circles-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          speed={1}
+        />
+        </div>
+      </div> );
+    } else {
+    return (
     <>
     <SearchBar onSearch={handleSearch} placeholder="Produkte suchen..."/>
     <div className="products-list">
@@ -123,7 +147,7 @@ const ProductsList = () => {
               <td>{product.productNumber}</td>
               <td>{product.shortDescription}</td>
               <td>{product.productID}</td>
-              <td>{product.price>0 ? product.price + "€" : ''}</td>
+              <td>{product.price ? currencyFormatter(product.price) : ''}</td>
               <td className="action">
                 <button onClick={handleEditClick(product)}>Bearbeiten</button>
                 <button onClick={handleClickDelete(product.id)}>Löschen</button>
@@ -163,7 +187,8 @@ const ProductsList = () => {
       </Modal.Footer>
     </Modal>
     </>
-  );  
+    );  
+  }
 }
 
 export default ProductsList;

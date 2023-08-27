@@ -146,3 +146,8 @@
   transition: background-color 0.2s, color 0.2s;
   width: 10vw;
 }
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}
