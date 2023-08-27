@@ -31,6 +31,7 @@ const LoginForm = () => {
           label="Benutzer"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          autoFocus
         />
         <TextField
         InputLabelProps={{

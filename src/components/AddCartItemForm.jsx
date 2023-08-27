@@ -106,7 +106,7 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
 
       <div className="form-group">
         <label>Auftragsnummer:</label>
-        <input type="text" name="jobnumber" value={formData.jobnumber && null} onChange={handleChange} />
+        <input type="text" name="jobnumber" value={formData.jobnumber && null} onChange={handleChange} autoFocus/>
       </div>
 
       <div className="form-group">
