@@ -103,3 +103,12 @@ export async function saveCartItemsToFirestore(cartItems, orderNumber, order) {
     };
   });
 }
+
+export function currencyFormatter(value){
+  const formatter = new Intl.NumberFormat( 'de-DE', {
+    currency: "EUR",
+    style: 'currency',
+    minimumFractionDigits: 2
+  });
+  return formatter.format(value);
+}

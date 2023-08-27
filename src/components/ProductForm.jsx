@@ -14,7 +14,7 @@ const ProductForm = ({ product, afterSave }) => {
     productID: 0,
     productNumber: '',
     shortDescription: '',
-    price: 0
+    price: ''
   });
   const [highestValueProductID, setHighestValueProductID] = useState(null)
   const navigate = useNavigate();
@@ -58,7 +58,7 @@ const ProductForm = ({ product, afterSave }) => {
     <form onSubmit={handleSubmit} className="product-form">
       <div className="form-group">
         <label>Beschreibung:</label>
-        <textarea rows = "5" cols="100" wrap='soft' name="description" value={formData.description} onChange={handleChange} />
+        <textarea rows = "5" cols="100" wrap='soft' name="description" value={formData.description} onChange={handleChange} autoFocus/>
       </div>
       
       <div className="form-group">
@@ -88,7 +88,7 @@ const ProductForm = ({ product, afterSave }) => {
 
       <div className="form-group">
         <label>UVP des Produkts</label>
-        <input type="number" name="price" value={parseFloat(formData.price)} onChange={handleChange} />
+        <input type="number" name="price" value={formData.price} onChange={handleChange} />
       </div>
 
       <div className="form-group">
