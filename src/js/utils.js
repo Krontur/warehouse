@@ -81,13 +81,13 @@ export function exportToExcel(data, filename = 'data') {
 //numero de order, que será pasado como parametro a la función.
 export async function saveCartItemsToFirestore(cartItems, orderNumber, order) {
   
-  let index = await getHighestFieldValue('entries', 'entryNumber');
+  let index = await getHighestFieldValue('orders', 'entryNumber');
 
   //guardamos los items de cartItems en la colección orders
   cartItems.forEach(async (cartItem) => {
 
     const docItemRef = await doc(db, 'items', cartItem.id);
-    const docEntriesRef = await collection(db, 'entries');
+    const docEntriesRef = await collection(db, 'orders');
 
     //añadimos el numero de order a cada item
     cartItem.orderNumber = orderNumber;
