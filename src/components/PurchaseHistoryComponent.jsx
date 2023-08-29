@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../config/firebase';
-import { getDocs, collection, orderBy, query, updateDoc, doc, getDoc } from 'firebase/firestore';
+import { getDocs, collection, orderBy, query, updateDoc, doc } from 'firebase/firestore';
 
 import SearchBar from './SearchBar';
 import { Circles } from 'react-loader-spinner';
