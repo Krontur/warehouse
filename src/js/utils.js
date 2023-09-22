@@ -87,7 +87,7 @@ export async function saveCartItemsToFirestore(cartItems, orderNumber, order) {
   cartItems.forEach(async (cartItem) => {
 
     const docItemRef = await doc(db, 'items', cartItem.id);
-    const docEntriesRef = await collection(db, 'orders');
+    const docOrdersRef = await collection(db, 'orders');
 
     //añadimos el numero de order a cada item
     cartItem.orderNumber = orderNumber;
@@ -97,8 +97,8 @@ export async function saveCartItemsToFirestore(cartItems, orderNumber, order) {
     index = index + 1;
     cartItem.entryNumber = index;
 
-    //añadimos el item a la colección entries
-    if(await addDoc(docEntriesRef, {...cartItem})){
+    //añadimos el item a la colección orders
+    if(await addDoc(docOrdersRef, {...cartItem})){
       deleteDoc(docItemRef);
     };
   });

@@ -16,6 +16,7 @@ import RequiredAuth from './context/RequiredAuth';
 //import { addOrdersToFirestore } from './test/addOrdersToFirestore';
 //import addOrderCompleteField  from './test/addOrderCompleteField.js';
 //import { updateOrderItems } from './test/test';
+//import { copyElementsFromEntriesToOrders } from './test/copyElementsFromEntriesToOrders.js';
 
 import './css/App.css';
 
