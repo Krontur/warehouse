@@ -9,9 +9,15 @@ export default async function addOrderCompleteField() {
     orders.forEach((item) => {
         const docRef = doc(colRef, item.id);
         const { quantity, received } = item.data();
-        const orderComplete = quantity <= received;
+        console.log(received);
+        let orderComplete;
+        if(received){
+            orderComplete = quantity <= received;
+        } else {
+            orderComplete = false;
+        }
 
-        batch.update(docRef, { "orderComplete": orderComplete });
+        batch.update(docRef, { "orderComplete": orderComplete, "received": received ? received : 0 });
 
         console.log(orderComplete ? "true" : "false");
     });

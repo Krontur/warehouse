@@ -21,7 +21,9 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
     productID: 0,
     productNumber: '',
     shortDescription: '',
-    comment: ''
+    comment: '',
+    orderComplete: false,
+    received: 0
   });
   const [highestValuePosition, setHighestValuePosition] = useState(null)
   const navigate = useNavigate();

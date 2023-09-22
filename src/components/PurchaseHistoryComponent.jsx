@@ -36,6 +36,7 @@ const PurchaseHistoryComponent = () => {
             await getDocs(query(histCollection, orderBy('orderComplete'), orderBy('entryNumber', 'desc')))
                 .then(snap => {
                     snap.forEach(doc => {
+                        console.log(doc.data());
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
                     })
                 });
@@ -55,6 +56,7 @@ const PurchaseHistoryComponent = () => {
                 setLoading(false);
             } else {
                 setPurchaseHistory(data);
+                console.log(data)
                 setLoading(false);
             }
         } catch (error) {
