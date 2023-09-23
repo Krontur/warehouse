@@ -94,17 +94,17 @@ const PurchaseHistoryComponent = () => {
             <table className="hist-table">
                 <thead>
                     <tr>
-                        <th>Buchungsnummer</th>
-                        <th>Datum der Buchung</th>
+                        <th>Buchung</th>
+                        <th>Datum</th>
                         <th>Nutzer</th>
-                        <th>Bestellnummer</th>
+                        <th>Bestellung</th>
                         <th>Produkt ID</th>
                         <th>EAN-Code</th>
                         <th>Art.Nr.</th>
                         <th>Hersteller</th>
                         <th>Beschreibung</th>
                         <th>Kostenstelle</th>
-                        <th>Auftragsnummer</th>
+                        <th>Auftrag</th>
                         <th>bestellt</th>
                         <th>erhalten</th>
                         <th></th>
