@@ -123,18 +123,15 @@ const PurchaseHistoryComponent = () => {
                             <td>{entry.user}</td>
                             <td>{entry.order}</td>
                             <td>{entry.productID}</td>
-                            <td>{entry.EANCode}</td>
-                            <td>{entry.productNumber}</td>
+                            <td>{entry.EANCode ? entry.EANCode : '' }</td>
+                            <td>{entry.productNumber ? entry.productNumber : ''}</td>
                             <td>{entry.producer}</td>
                             <td>{entry.description}</td>
                             <td>{entry.costcenter}</td>
                             <td>{entry.jobnumber}</td>
                             <td>{entry.quantity}</td>
-                            <td>
-                                {entry.received}
-                            </td>
-                            <td>
-                                
+                            <td>{entry.received}</td>
+                            <td>                                
                                 <button 
                                     onClick={() => {
                                     const addProduct = prompt("Anzahl der neuen empfangenen Produkte");
@@ -164,7 +161,6 @@ const PurchaseHistoryComponent = () => {
                                 >
                                     +
                                 </button>
-
                             </td>
                             <td>{entry.unit}</td>
                             <td>{entry.comment}</td>
