@@ -99,6 +99,8 @@ const PurchaseHistoryComponent = () => {
                         <th>Nutzer</th>
                         <th>Bestellnummer</th>
                         <th>Produkt ID</th>
+                        <th>EAN-Code</th>
+                        <th>Art.Nr.</th>
                         <th>Hersteller</th>
                         <th>Beschreibung</th>
                         <th>Kostenstelle</th>
@@ -121,6 +123,8 @@ const PurchaseHistoryComponent = () => {
                             <td>{entry.user}</td>
                             <td>{entry.order}</td>
                             <td>{entry.productID}</td>
+                            <td>{entry.EANCode}</td>
+                            <td>{entry.productNumber}</td>
                             <td>{entry.producer}</td>
                             <td>{entry.description}</td>
                             <td>{entry.costcenter}</td>
