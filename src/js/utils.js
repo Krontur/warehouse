@@ -92,6 +92,8 @@ export async function saveCartItemsToFirestore(cartItems, orderNumber, order) {
     //añadimos el numero de order a cada item
     cartItem.orderNumber = orderNumber;
     cartItem.order = order;
+    cartItem.received = 0;
+    cartItem.orderComplete = false;
 
     //añadimos el numero de entrada de la colección a cada item
     index = index + 1;
