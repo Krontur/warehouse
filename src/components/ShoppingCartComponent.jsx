@@ -37,7 +37,7 @@ const ShoppingCartComponent = () => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
                     })
                 });
-            const columnOrder = ["Position", "date", "user", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "unit", "id", "comment"];
+            const columnOrder = ["Position", "date", "user", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "received", "orderComplete", "unit", "id", "comment"];
             const reorderedData = data.map(row => {
                 return columnOrder.reduce((obj, key) => {
                     obj[key] = row[key];
