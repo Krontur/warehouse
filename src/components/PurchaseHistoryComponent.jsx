@@ -33,8 +33,9 @@ const PurchaseHistoryComponent = () => {
             setLoading(true);
             let histCollection = collection(db, 'orders');
             const data = [];
-            await getDocs(query(histCollection, orderBy('orderComplete'), orderBy('entryNumber', 'desc')))
+            await getDocs(query(histCollection, orderBy('orderComplete', 'asc'), orderBy('entryNumber', 'desc')))
                 .then(snap => {
+                    console.log(snap);
                     snap.forEach(doc => {
                         console.log(doc.data());
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
@@ -126,9 +127,9 @@ const PurchaseHistoryComponent = () => {
                             <td>{entry.EANCode ? entry.EANCode : '' }</td>
                             <td>{entry.productNumber ? entry.productNumber : ''}</td>
                             <td>{entry.producer}</td>
-                            <td>{entry.description}</td>
-                            <td>{entry.costcenter}</td>
-                            <td>{entry.jobnumber}</td>
+                            <td>{entry.description ? entry.description : ''}</td>
+                            <td>{entry.costcenter ? entry.costcenter : ''}</td>
+                            <td>{entry.jobnumber ? entry.jobnumber : ''}</td>
                             <td>{entry.quantity}</td>
                             <td>{entry.received}</td>
                             <td>                                
