@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../config/firebase';
-import { collection, addDoc, query, where, getDocs, updateDoc, doc } from 'firebase/firestore';
+import { collection, addDoc, query, where, getDocs, doc, runTransaction } from 'firebase/firestore';
 import '../css/ProductForm.css';
 import { getHighestFieldValue } from '../js/utils';
 import { UserAuth } from '../context/AuthContext';
@@ -87,14 +87,25 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
       jobnumber: formData.jobnumber || null,
       comment: formData.comment || null
      };
-    if (item) {
-      await updateDoc(doc(db, "items", item.id), { ...updatedData });
-      afterSave && afterSave();
-    } 
-    if(product || !item){
-      await addDoc(collection(db, "items"), { ...updatedData, Position: highestValuePosition+1 });
+     try {
+      await runTransaction(db, async (transaction) => {
+        if (item) {
+          const itemRef = doc(db, "items", item.id);
+          transaction.update(itemRef, { ...updatedData });
+          afterSave && afterSave();
+        } else if (product || !item) {
+
+          let value = await getHighestFieldValue('items', 'Position');
+          setHighestValuePosition(value);
+
+          const newDocRef = doc(collection(db, "items"));
+          transaction.set(newDocRef, { ...updatedData, Position: highestValuePosition + 1 });
+        }
+      });
+      navigate("/shoppingcart");
+    } catch (error) {
+      alert("Fehler beim Hinzufügen des Artikels: " + error.message);
     }
-    navigate("/shoppingcart");
   };
 
   return (

@@ -68,7 +68,7 @@ const ShoppingCartComponent = () => {
 
     const handleClickDelete = (id) => async () => {
         try {
-          if (window.confirm("Endgültig löschen?")) {
+          if (window.confirm("Bist du wirklich bereit, diesen Schatz aus deinem Einkaufswagen zu verbannen? Wer weiß, wann du wieder so etwas Tolles findest!")) {
             await deleteDoc(doc(db, 'items', id));
             getCartItems();
           }

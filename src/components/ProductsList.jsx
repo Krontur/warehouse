@@ -78,7 +78,7 @@ const ProductsList = () => {
 
   const handleClickDelete = (id) => async () => {
     try {
-      if (window.confirm("Want to delete?")) {
+      if (window.confirm("Bist du sicher, dass du diesen unschätzbar wertvollen Produkt in das digitale Nirwana schicken möchtest??")) {
         await deleteDoc(doc(db, 'products', id));
         getProductsList();
       }
