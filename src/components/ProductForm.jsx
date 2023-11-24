@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../config/firebase';
-import { doc, updateDoc, collection, addDoc } from 'firebase/firestore';
+import { doc, updateDoc, collection, addDoc, runTransaction } from 'firebase/firestore';
 import '../css/ProductForm.css';
 import { getHighestFieldValue } from '../js/utils';
 
@@ -24,7 +24,7 @@ const ProductForm = ({ product, afterSave }) => {
       setFormData(product);
     }
     async function fetchHighestValue(){
-      const value = await getHighestFieldValue('products', 'productID');
+      let value = await getHighestFieldValue('products', 'productID');
       setHighestValueProductID(value);
     }
     fetchHighestValue();
@@ -47,8 +47,30 @@ const ProductForm = ({ product, afterSave }) => {
       await updateDoc(doc(db, "products", product.id), updatedData);
       afterSave && afterSave();
     } else {
-      await addDoc(collection(db, "products"), { ...updatedData, productID: highestValueProductID+1 });
-      navigate("/products")
+          // Añadir un nuevo producto
+          try {
+            await runTransaction(db, async (transaction) => {
+                // Aquí, necesitas una referencia al documento que mantiene el valor más alto de productID
+                let value = await getHighestFieldValue('products', 'productID');
+                setHighestValueProductID(value);
+
+                let newProductID;
+                if (!highestValueProductID) {
+                    newProductID = 1; // Si no existe, comienza con 1
+                } else {
+                    newProductID = highestValueProductID + 1; // Incrementa el último productID conocido
+                }
+
+                // Aquí añades el nuevo producto
+                const newProductRef = doc(collection(db, "products"));
+                transaction.set(newProductRef, { ...updatedData, productID: newProductID });
+            });
+            navigate("/products");
+        } catch (error) {
+            console.error("Transaction failed: ", error);
+            // Manejar errores o reintentar la transacción aquí
+            alert("Fehler beim Hinzufügen des Produkts: " + error.message);
+        }
     }
   };
 
