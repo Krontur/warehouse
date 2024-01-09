@@ -84,13 +84,19 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
       Position: item ? item.Position : highestValuePosition+1,
       date: date.getDate()+"/"+ (date.getMonth()+1)+"/"+ date.getFullYear(),
       user: user.displayName,
-      jobnumber: formData.jobnumber || null,
-      comment: formData.comment || null
+      jobnumber: formData.jobnumber,
+      comment: formData.comment,
+      quantity: formData.quantity
      };
      try {
       await runTransaction(db, async (transaction) => {
         if (item) {
           const itemRef = doc(db, "items", item.id);
+          const itemDoc = await transaction.get(itemRef);
+          console.log(itemDoc);
+          if(!itemDoc.exists()){
+            throw "Document does not exist!";
+          }
           transaction.update(itemRef, { ...updatedData });
           afterSave && afterSave();
         } else if (product || !item) {
@@ -104,7 +110,7 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
       });
       navigate("/shoppingcart");
     } catch (error) {
-      alert("Fehler beim Hinzufügen des Artikels: " + error.message);
+      alert("Fehler beim Hinzufügen des Artikels: " + error.message + " " + error.code);
     }
   };
 
@@ -119,7 +125,7 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
 
       <div className="form-group">
         <label>Auftragsnummer:</label>
-        <input type="text" name="jobnumber" value={formData.jobnumber && null} onChange={handleChange} autoFocus/>
+        <input type="text" name="jobnumber" value={formData.jobnumber} onChange={handleChange} autoFocus/>
       </div>
 
       <div className="form-group">
@@ -174,7 +180,7 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
 
       <div className="form-group">
         <label>Kommentar:</label>
-        <textarea rows={6} cols={26} name="comment" value={formData.comment && null} onChange={handleChange} />
+        <textarea rows={6} cols={26} name="comment" value={formData.comment} onChange={handleChange} />
       </div>
 
       <div className="form-group">
