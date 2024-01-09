@@ -37,7 +37,7 @@ const ShoppingCartComponent = () => {
                         data.push(Object.assign(doc.data(), { "id": doc.id }));
                     })
                 });
-            const columnOrder = ["Position", "date", "user", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "received", "orderComplete", "unit", "id", "comment"];
+            const columnOrder = ["Position", "date", "user", "productID", "productNumber", "EANCode", "producer", "description",  "costcenter", "jobnumber", "quantity", "received", "orderComplete", "shortDescription", "unit", "id", "comment"];
             const reorderedData = data.map(row => {
                 return columnOrder.reduce((obj, key) => {
                     obj[key] = row[key];
@@ -57,7 +57,7 @@ const ShoppingCartComponent = () => {
                 .then(data => {
                     setLastOrder(data);
                 });
-    }, []);
+    }, [showModalEdit]);
 
     const handleSendClick = (cartItems, order, orderNumber) => {
         exportToExcel(cartItems, order);
@@ -84,7 +84,6 @@ const ShoppingCartComponent = () => {
     
     const handleCloseModal = async () => {
         setSelectedItem(null);
-        getCartItems()
         setShowModalEdit(false); // Close the modal
     }
     if(loading){
@@ -147,7 +146,11 @@ const ShoppingCartComponent = () => {
                             <td>{item.unit}</td>
                             <td>{item.comment}</td>
                             <td className="action">
-                                <button onClick={handleEditClick(item)}>Bearbeiten</button>
+                                <button onClick={handleEditClick({
+                                    ...item,
+                                    orderComplete: false,
+                                    received: 0
+                                    })}>Bearbeiten</button>
                                 <button onClick={handleClickDelete(item.id)}>Löschen</button>
                             </td>
                         </tr>

@@ -132,12 +132,43 @@ const PurchaseHistoryComponent = () => {
                             <td>{entry.jobnumber ? entry.jobnumber : ''}</td>
                             <td>{entry.quantity}</td>
                             <td>{entry.received}</td>
-                            <td>                                
+                            <td>
+                            <button 
+                                    onClick={() => {
+                                    const delProduct = Number(prompt("Anzahl der nicht empfangenen Produkte"));
+
+                                    if(delProduct>0) {
+                                        const notReceived = entry.received - delProduct;
+
+                                        const entryRef = doc(db, "orders", entry.id);
+                                        const updatedOrder = {
+                                            ...entry,
+                                            orderComplete: false,
+                                        }
+                                        console.log(entry.quantity)
+                                        if(entry.quantity <= notReceived){
+                                            updatedOrder.orderComplete = true;
+                                            console.log(updatedOrder);
+                                        }                                        
+                                        updateDoc(entryRef, {
+                                            ...updatedOrder,
+                                            received: notReceived,
+                                        })
+                                        .then(() => {
+                                        getPurchaseHistory(); 
+                                        });
+                                    } else {
+                                        alert("Bitte geben Sie eine Zahl größer als 0 ein!")
+                                    }
+                                    }}
+                                >
+                                    -
+                                </button>                             
                                 <button 
                                     onClick={() => {
-                                    const addProduct = prompt("Anzahl der neuen empfangenen Produkte");
+                                    const addProduct = Number(prompt("Anzahl der neuen empfangenen Produkte"));
 
-                                    if(addProduct) {
+                                    if(addProduct>0) {
                                         const newReceived = parseInt(entry.received) + parseInt(addProduct);
 
                                         const entryRef = doc(db, "orders", entry.id);
@@ -146,7 +177,7 @@ const PurchaseHistoryComponent = () => {
                                             orderComplete: false,
                                         }
                                         console.log(entry.quantity)
-                                        if(entry.quantity >= newReceived){
+                                        if(entry.quantity <= newReceived){
                                             updatedOrder.orderComplete = true;
                                             console.log(updatedOrder);
                                         }                                        
@@ -157,6 +188,8 @@ const PurchaseHistoryComponent = () => {
                                         .then(() => {
                                         getPurchaseHistory(); 
                                         });
+                                    } else {
+                                        alert("Bitte geben Sie eine Zahl größer als 0 ein!")
                                     }
                                     }}
                                 >
