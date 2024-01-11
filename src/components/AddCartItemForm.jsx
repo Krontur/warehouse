@@ -91,7 +91,7 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
       producer: formData.producer,
       productID: formData.productID,
       productNumber: formData.productNumber,
-      shortDescription: formData.shortDescription,
+      shortDescription: formData.shortDescription || "",
       comment: formData.comment || "",
       quantity: formData.quantity
      };
