@@ -84,8 +84,15 @@ const AddCartItemForm = ({ product, item, afterSave }) => {
       Position: item ? item.Position : highestValuePosition+1,
       date: date.getDate()+"/"+ (date.getMonth()+1)+"/"+ date.getFullYear(),
       user: user.displayName,
-      jobnumber: formData.jobnumber,
-      comment: formData.comment,
+      jobnumber: formData.jobnumber || "",
+      costcenter: formData.costcenter,
+      description: formData.description,
+      EANCode: formData.EANCode || "",
+      producer: formData.producer,
+      productID: formData.productID,
+      productNumber: formData.productNumber,
+      shortDescription: formData.shortDescription,
+      comment: formData.comment || "",
       quantity: formData.quantity
      };
      try {
