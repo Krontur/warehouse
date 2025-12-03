@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Warehouse Orders Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Warehouse Orders Dashboard es una aplicación web construida con React que digitaliza el flujo de compras internas de un almacén: catálogo de productos, alta de pedidos, seguimiento de entregas y exportación a Excel, todo respaldado por Firebase.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Características principales
 
-### `npm start`
+- **Autenticación Firebase** con persistencia de sesión y control de roles para restringir funcionalidades sensibles.
+- **Catálogo de productos** conectado a Firestore, con búsqueda libre, paginación y edición en ventanas modales.
+- **Carrito de compras** que permite generar pedidos desde los productos, guardar cada movimiento y exportar la orden a Excel (`xlsx`).
+- **Historial de pedidos** con filtros, actualización de cantidades recibidas y resaltado automático de entregas completas.
+- **Integración completa con Firestore** para colecciones `products`, `items` y `orders`, incluyendo utilidades para migraciones y scripts de soporte.
+- **Interfaz responsiva** construida con React Bootstrap y estilos propios para mantener una experiencia consistente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Stack tecnológico
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 18 + React Router 6
+- Firebase Authentication & Cloud Firestore
+- React Bootstrap y react-icons
+- `xlsx` para exportación a Excel
+- `react-loader-spinner` para estados de carga
 
-### `npm test`
+## Requisitos previos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js >= 16 (se recomienda la LTS vigente) y npm.
+- Proyecto de Firebase con Authentication habilitado (correo/contraseña) y una base Firestore con las colecciones necesarias.
 
-### `npm run build`
+## Configuración inicial
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona el repositorio y entra en la carpeta del proyecto.
+2. Instala las dependencias:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+	```bash
+	npm install
+	```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Crea un archivo `.env.local` en la raíz con las credenciales de tu proyecto Firebase:
 
-### `npm run eject`
+	```bash
+	REACT_APP_FIREBASE_API_KEY=...
+	REACT_APP_FIREBASE_AUTH_DOMAIN=...
+	REACT_APP_FIREBASE_DATABASE_URL=...
+	REACT_APP_FIREBASE_PROJECT_ID=...
+	REACT_APP_FIREBASE_STORAGE_BUCKET=...
+	REACT_APP_FIREBASE_MESSAGING_SENDER_ID=...
+	REACT_APP_FIREBASE_APP_ID=...
+	REACT_APP_FIREBASE_MEASUREMENT_ID=...
+	```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. (Opcional) Utiliza los scripts de la carpeta `test/` para poblar datos iniciales en Firestore. Ejecuta cada script con Node después de configurar las variables de entorno:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+	```bash
+	node src/test/addProductsToFirestore.js
+	```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Scripts disponibles
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm start` – levanta el servidor de desarrollo en `http://localhost:3000`.
+- `npm test` – ejecuta la suite de pruebas en modo interactivo (Create React App).
+- `npm run build` – genera la build optimizada para producción.
 
-## Learn More
+## Flujo funcional
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Acceso**: los usuarios se autentican con Firebase. Para exponer funcionalidades de administración debes asignar el rol adecuado.
+2. **Gestión de catálogo**: `ProductsList` muestra los productos almacenados en Firestore, permite buscarlos, editarlos y añadirlos al carrito.
+3. **Carrito y pedidos**: `ShoppingCartComponent` consolida los ítems pendientes, genera un número de orden único, exporta a Excel y persiste la orden en Firestore.
+4. **Historial y recepción**: `PurchaseHistoryComponent` lista las órdenes, habilita filtros y actualiza cantidades recibidas para completar la entrega.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Estructura del proyecto
 
-### Code Splitting
+```
+src/
+  components/        # Componentes de UI (catálogo, carrito, historial, formularios)
+  context/           # Contexto de autenticación y guardas de ruta
+  config/            # Inicialización de Firebase
+  css/               # Hojas de estilos por componente
+  js/utils.js        # utilidades Firestore, exportación a Excel, formateadores
+  data/              # Datos de apoyo y ficheros CSV/JSON
+  test/              # Scripts Node para poblar o migrar colecciones
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Buenas prácticas y recomendaciones
 
-### Analyzing the Bundle Size
+- Habilita reglas de seguridad en Firestore acorde a los roles que maneje la aplicación.
+- Revisa los estilos de los modales (`warehouse-modal`) si personalizas la UI; evita sobrescribir clases globales de Bootstrap.
+- Antes de desplegar, ejecuta `npm run build` y valida la build en un host estático o en Firebase Hosting.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
